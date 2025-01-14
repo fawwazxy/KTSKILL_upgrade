@@ -5,42 +5,94 @@
 @section('content')
 <style>
 /* In your CSS file (e.g., style.css) */
+/* In your CSS file (e.g., style.css) */
 .social-icons {
-    position: fixed;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-    z-index: 100;
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  z-index: 100;
 }
 
 .social-icons ul {
-    list-style: none;
-    padding: 0;
-    display: flex; /* Key change: Enable flexbox */
-    flex-direction: column; /* Key change: Arrange items vertically */
-    align-items: center; /* Center horizontally */
+  list-style: none;
+  padding: 0;
+  display: none; /* Initially hide the list */
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-icons button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f1f1f1;
+  transition: background-color 0.3s;
+  color: #333;
+}
+
+.social-icons button:hover {
+  background-color: #e0e0e0;
+  color: #000;
+}
+
+.social-icons button:focus {
+  outline: none;
+}
+
+.social-icons.active ul {
+  display: flex; /* Show the list on click */
 }
 
 .social-icons li {
-    margin-bottom: 10px; /* Adjust spacing between icons */
+  margin-bottom: 10px;
 }
 
 .social-icons a {
-    display: flex; /* Make the link a flex container */
-    align-items: center; /* Vertically center the icon */
-    justify-content: center; /* Horizontally center the icon */
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #f1f1f1;
-    transition: background-color 0.3s;
-    color: #333; /* Default icon color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f1f1f1;
+  transition: background-color 0.3s;
+  color: #333;
 }
 
 .social-icons a:hover {
-    background-color: #e0e0e0;
-    color: #000; /* Change icon color on hover */
+  background-color: #e0e0e0;
+  color: #000;
 }
+
+.social-icons {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  z-index: 100;
+}
+
+.social-icons ul {
+  list-style: none;
+  padding: 0;
+  display: none; /* Initially hide the list */
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-icons button {
+  /* ... your button styles ... */
+}
+
+.social-icons.active ul {
+  display: flex; /* Show the list when 'active' class is added */
+}
+
+/* Rest of your CSS for other elements remains the same */
 
 /* For the service icons (no changes needed) */
 .icon {
@@ -142,15 +194,18 @@
             
           </div>
           
-          <div class="social-icons" style="position: fixed; top: 50%; right: 20px; transform: translateY(-50%); z-index: 100;">
-          <ul>
-            <li><a href="https://www.facebook.com/yourpage" target="_blank"><i class="fa fa-facebook"></i></a></li>
-             <li><a href="https://twitter.com/yourtwitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="https://www.linkedin.com/in/yourprofile" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-            <li><a href="https://www.instagram.com/yourinstagram/" target="_blank"><i class="fa fa-instagram"></i></a></li>
-            <li><a href="https://wa.me/yourphonenumber" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
-          </ul>
-        </div>
+          <div class="social-icons">
+  <button>
+    <i class="fa fa-share-alt"></i> 
+  </button>
+  <ul>
+    <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+    <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+    <li><a href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+    <li><a href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
+    <li><a href="#" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
+  </ul>
+</div>
         </div>
       </div>
     </div>
@@ -743,6 +798,11 @@
 @section('scripts')
     <script>
 
-      
+const socialButton = document.querySelector('.social-icons button');
+const socialList = document.querySelector('.social-icons ul');
+
+socialButton.addEventListener('click', () => {
+  socialButton.parentElement.classList.toggle('active'); 
+});
     </script>
     @endsection
