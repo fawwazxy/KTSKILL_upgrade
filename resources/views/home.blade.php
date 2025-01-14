@@ -3,6 +3,63 @@
 
 
 @section('content')
+<style>
+/* In your CSS file (e.g., style.css) */
+.social-icons {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    z-index: 100;
+}
+
+.social-icons ul {
+    list-style: none;
+    padding: 0;
+    display: flex; /* Key change: Enable flexbox */
+    flex-direction: column; /* Key change: Arrange items vertically */
+    align-items: center; /* Center horizontally */
+}
+
+.social-icons li {
+    margin-bottom: 10px; /* Adjust spacing between icons */
+}
+
+.social-icons a {
+    display: flex; /* Make the link a flex container */
+    align-items: center; /* Vertically center the icon */
+    justify-content: center; /* Horizontally center the icon */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f1f1f1;
+    transition: background-color 0.3s;
+    color: #333; /* Default icon color */
+}
+
+.social-icons a:hover {
+    background-color: #e0e0e0;
+    color: #000; /* Change icon color on hover */
+}
+
+/* For the service icons (no changes needed) */
+.icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f1f1;
+}
+
+.icon img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 50%;
+}
+</style>
   <section class="section main-banner" id="top" data-section="section1">
       <video autoplay muted loop id="bg-video">
           <source src="{{asset('assets/images/course-video.mp4')}}" type="video/mp4" />
@@ -84,6 +141,16 @@
             </div>
             
           </div>
+          
+          <div class="social-icons" style="position: fixed; top: 50%; right: 20px; transform: translateY(-50%); z-index: 100;">
+          <ul>
+            <li><a href="https://www.facebook.com/yourpage" target="_blank"><i class="fa fa-facebook"></i></a></li>
+             <li><a href="https://twitter.com/yourtwitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/yourprofile" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="https://www.instagram.com/yourinstagram/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="https://wa.me/yourphonenumber" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
+          </ul>
+        </div>
         </div>
       </div>
     </div>
