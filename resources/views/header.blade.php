@@ -14,21 +14,8 @@
                         <li class="scroll-to-section">
                             <a href="{{ url('/') }}" class="{{ request()->is('/') ? 'active' : '' }}">Home</a>
                         </li>
-                        <li>
-                            <a href="{{ url('meeting') }}" class="{{ request()->is('meeting') ? 'active' : '' }}">Meetings</a>
-                        </li>
                         <li class="scroll-to-section">
-                            <a href="#apply" class="{{ request()->is('home') ? 'active' : '' }}">Apply Now</a>
-                        </li>
-                        <li class="has-sub">
-                            <a href="javascript:void(0)">Pages</a>
-                            <ul class="sub-menu">
-                                <li><a href="{{ url('meetings') }}" class="{{ request()->is('meetings') ? 'active' : '' }}">Upcoming Meetings</a></li>
-                                <li><a href="{{ url('meeting-detail') }}" class="{{ request()->is('meeting-detail') ? 'active' : '' }}">Meeting Details</a></li>
-                            </ul>
-                        </li>
-                        <li class="scroll-to-section">
-                            <a href="#courses" class="{{ request()->is('courses') ? 'active' : '' }}">Courses</a>
+                            <a href="{{ url('course') }}" class="{{ request()->is('course') ? 'active' : '' }}">Courses</a>
                         </li>
                         <li class="scroll-to-section">
                             <a href="#contact" class="{{ request()->is('contact') ? 'active' : '' }}">Contact Us</a>
