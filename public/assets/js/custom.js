@@ -2,22 +2,7 @@
     "use strict";
 
     // Header Background Toggle on Scroll
-	$(window).scroll(function () {
-		var scroll = $(window).scrollTop();
-		var box = $('.header-text').outerHeight(true) || 100; // Fallback height if .header-text is empty
-		var header = $('header').outerHeight() || 0;
-	
-		console.log("Scroll Position:", scroll);
-		console.log("Header Text Height (box):", box);
-		console.log("Header Height:", header);
-	
-		if (scroll >= box - header) {
-			$("header").addClass("background-header");
-		} else {
-			$("header").removeClass("background-header");
-		}
-	});
-	
+
 
     // Filter Functionality
     if ($('.filters ul li').length) {
