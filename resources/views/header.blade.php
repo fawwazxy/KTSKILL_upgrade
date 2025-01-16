@@ -22,7 +22,7 @@
                             <a href="{{ url('/InfoKorporat') }}" class="{{ request()->is('/InfoKorporat') ? 'active' : '' }}">Info Korporat</a>
                         </li>
                         <li class="scroll-to-section">
-                            <a href="{{ url('course') }}" class="{{ request()->is('course') ? 'active' : '' }}">Courses</a>
+                            <a href="{{ url('course') }}" class="{{ request()->is('course') ? 'active' : '' }}">Kursus</a>
                         </li>
                         <li class="scroll-to-section">
                             <a href="{{ url('/ProgramAktiviti') }}" class="{{ request()->is('/ProgramAktiviti') ? 'active' : '' }}">Program & Aktiviti</a>
