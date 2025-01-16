@@ -12,107 +12,79 @@
     </div>
 </section>
 
-<section class="course-list">
+<section class="course-list" style="background-color: #f0f4f8; padding: 40px 0;">
     <div class="container">
         <div class="row">
             <div class="col-lg-4">
-                <div class="card course-card" style="cursor: pointer;" data-toggle="modal" data-target="#courseModal" 
-                    data-title="Laravel Development" 
-                    data-description="Learn the fundamentals of Laravel, a popular PHP framework for web development." 
-                    data-modules="Introduction to Laravel, Routing and Middleware, Controllers and Views, Database Migrations and Eloquent ORM, Form Validation and Authentication, RESTful APIs with Laravel, Testing and Debugging, Deployment and Best Practices" 
-                    data-fees="Standard Fee: $499, Early Bird Discount: $399" 
-                    data-duration="8 weeks (2 classes per week)" 
-                    data-prerequisites="Basic knowledge of PHP and web development concepts is recommended." 
-                    data-instructor="John Doe - Senior Laravel Developer">
-                    <img src="path/to/laravel-image.jpg" class="card-img-top" alt="Laravel Course">
-                    <div class="card-body">
-                        <h5 class="card-title">Laravel Development</h5>
-                        <p class="card-text">Learn the fundamentals of Laravel, a popular PHP framework for web development.</p>
-                    </div>
+                <div class="card course-card" style="cursor: pointer;">
+                    <a href="{{ url('/course/Pemasangan & Penyelenggaraan Elektrik - Satu Fasa') }}">
+                        <img src="path/to/laravel-image.jpg" class="card-img-top" alt="Laravel Course">
+                        <div class="card-body">
+                            <h5 class="card-title">Pemasangan & Penyelenggaraan Elektrik - Satu Fasa</h5>
+                            <p class="card-text">Pemasangan & Penyelenggaraan Elektrik - Satu Fasa.</p>
+                            <p><strong>Duration:</strong> 1 Fasa</p>
+                            <p><strong>Modules:</strong> 8</p>
+                            <p><strong>Instructor:</strong> John Doe</p>
+                        </div>
+                    </a>
                 </div>
             </div>
             <!-- Repeat similar blocks for other courses -->
+            <div class="col-lg-4">
+                <div class="card course-card" style="cursor: pointer;">
+                    <a href="{{ url('/course/Pemasangan & Penyelenggaraan Satu Fasa Penyaman Udara, Pengudaraan, Pemanasan (HVAC)') }}">
+                        <img src="path/to/react-image.jpg" class="card-img-top" alt="React Course">
+                        <div class="card-body">
+                            <h5 class="card-title">Pemasangan & Penyelenggaraan Satu Fasa Penyaman Udara, Pengudaraan, Pemanasan (HVAC)</h5>
+                            <p class="card-text">Pemasangan & Penyelenggaraan Satu Fasa Penyaman Udara, Pengudaraan, Pemanasan (HVAC).</p>
+                            <p><strong>Duration:</strong> 1 Fasa</p>
+                            <p><strong>Modules:</strong> 6</p>
+                            <p><strong>Instructor:</strong> Jane Smith</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card course-card" style="cursor: pointer;">
+                    <a href="{{ url('/course/Operasi Pemesinan') }}">
+                        <img src="path/to/python-image.jpg" class="card-img-top" alt="Python Course">
+                        <div class="card-body">
+                            <h5 class="card-title">Operasi Pemesinan</h5>
+                            <p class="card-text">Operasi Pemesinan.</p>
+                            <p><strong>Duration:</strong> 1 Fasa</p>
+                            <p><strong>Modules:</strong> 10</p>
+                            <p><strong>Instructor:</strong> Alice Johnson</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- Course Modal -->
-<div class="modal fade" id="courseModal" tabindex="-1" role="dialog" aria-labelledby="courseModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="courseModalLabel">Course Title</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <p id="courseDescription"></p>
-                <ul class="nav nav-tabs" id="courseInfoTabs" role="tablist">
-                    <li class="nav-item">
-                        <a class="nav-link active" id="modules-tab" data-toggle="tab" href="#modules" role="tab" aria-controls="modules" aria-selected="true">Modules</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="fees-tab" data-toggle="tab" href="#fees" role="tab" aria-controls="fees" aria-selected="false">Fees</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="duration-tab" data-toggle="tab" href="#duration" role="tab" aria-controls="duration" aria-selected="false">Duration</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="prerequisites-tab" data-toggle="tab" href="#prerequisites" role="tab" aria-controls="prerequisites" aria-selected="false">Prerequisites</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="instructor-tab" data-toggle="tab" href="#instructor" role="tab" aria-controls="instructor" aria-selected="false">Instructor</a>
-                    </li>
-                </ul>
-                <div class="tab-content" id="courseInfoContent">
-                    <div class="tab-pane fade show active" id="modules" role="tabpanel" aria-labelledby="modules-tab">
-                        <p id="courseModules"></p>
-                    </div>
-                    <div class="tab-pane fade" id="fees" role="tabpanel" aria-labelledby="fees-tab">
-                        <p id="courseFees"></p>
-                    </div>
-                    <div class="tab-pane fade" id="duration" role="tabpanel" aria-labelledby="duration-tab">
-                        <p id="courseDuration"></p>
-                    </div>
-                    <div class="tab-pane fade" id="prerequisites" role=" tabpanel" aria-labelledby="prerequisites-tab">
-                        <p id="coursePrerequisites"></p>
-                    </div>
-                    <div class="tab-pane fade" id="instructor" role="tabpanel" aria-labelledby="instructor-tab">
-                        <p id="courseInstructor"></p>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Enroll Now</button>
-            </div>
-        </div>
-    </div>
-</div>
+<style>
+    .course-card {
+        transition: transform 0.2s;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+    }
 
-@endsection
+    .course-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
 
-@section('scripts')
-<script>
-    $(document).ready(function() {
-        $('.course-card').on('click', function() {
-            var title = $(this).data('title');
-            var description = $(this).data('description');
-            var modules = $(this).data('modules');
-            var fees = $(this).data('fees');
-            var duration = $(this).data('duration');
-            var prerequisites = $(this).data('prerequisites');
-            var instructor = $(this).data('instructor');
+    .card-body {
+        padding: 20px;
+    }
 
-            $('#courseModalLabel').text(title);
-            $('#courseDescription').text(description);
-            $('#courseModules').text(modules);
-            $('#courseFees').text(fees);
-            $('#courseDuration').text(duration);
-            $('#coursePrerequisites').text(prerequisites);
-            $('#courseInstructor').text(instructor);
-        });
-    });
-</script>
+    .card-title {
+        font-size: 1.25rem;
+        font-weight: bold;
+    }
+
+    .card-text {
+        margin-bottom: 10px;
+    }
+</style>
 @endsection
