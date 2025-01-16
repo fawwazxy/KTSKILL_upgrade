@@ -199,7 +199,6 @@
                 </div>
             </div>
         </div>
-@include('footer')
     </section>
 @endsection
 

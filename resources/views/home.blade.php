@@ -3,91 +3,81 @@
 
 
 @section('content')
-  <section class="section main-banner" id="top" data-section="section1">
-      <video autoplay muted loop id="bg-video">
-          <source src="{{asset('assets/images/course-video.mp4')}}" type="video/mp4" />
-      </video>
+<style>
+.swiper-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+}
 
-      <div class="video-overlay header-text">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="caption">
-              <h6>Hello Students</h6>
-              <h2>Welcome to Education</h2>
-              <p>This is an edu meeting HTML CSS template provided by <a rel="nofollow" href="https://templatemo.com/page/1" target="_blank">TemplateMo website</a>. This is a Bootstrap v5.1.3 layout. The video background is taken from Pexels website, a group of young people by <a rel="nofollow" href="https://www.pexels.com/@pressmaster" target="_blank">Pressmaster</a>.</p>
-              <div class="main-button-red">
-                  <div class="scroll-to-section"><a href="#contact">Join Us Now!</a></div>
-              </div>
-          </div>
-              </div>
-            </div>
+.swiper-container {
+    width: 100%; /* Full width */
+    height: 50vh; /* Adjust height based on your preference */
+    max-height: 600px; /* Optional: Limit the maximum height */
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #000; /* Optional: Fallback background color */
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the slide without distortion */
+}
+
+
+
+</style>
+
+<div class="swiper-container header-text" id="eventSwiper">
+  <div class="swiper-wrapper">
+      <div class="swiper-slide">
+          <img src="{{ asset('assets/images/course-01.jpg') }}" alt="Event Image 1">
+          <div class="swiper-caption">
+              <h5>Event Title 1</h5>
+              <p>Description for event 1.</p>
           </div>
       </div>
-  </section>
+      <div class="swiper-slide">
+          <img src="{{ asset('assets/images/course-02.jpg') }}" alt="Event Image 2">
+          <div class="swiper-caption">
+              <h5>Event Title 2</h5>
+              <p>Description for event 2.</p>
+          </div>
+      </div>
+      <div class="swiper-slide">
+          <img src="{{ asset('assets/images/course-03.jpg') }}" alt="Event Image 3">
+          <div class="swiper-caption">
+              <h5>Event Title 3</h5>
+              <p>Description for event 3.</p>
+          </div>
+      </div>
+  </div>
+  <!-- Add navigation buttons -->
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+  <!-- Add pagination -->
+  <div class="swiper-pagination"></div>
+</div>
+
+
+
   <!-- ***** Main Banner Area End ***** -->
 
-  <section class="services">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="owl-service-item owl-carousel">
-          
-            <div class="item">
-              <div class="icon">
-                <img src="{{asset('assets/images/service-icon-01.png')}}" alt="">
-              </div>
-              <div class="down-content">
-                <h4>Best Education</h4>
-                <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non vestibulum.</p>
-              </div>
-            </div>
-            
-            <div class="item">
-              <div class="icon">
-                <img src="{{asset('assets/images/service-icon-02.png')}}" alt="">
-              </div>
-              <div class="down-content">
-                <h4>Best Teachers</h4>
-                <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non vestibulum.</p>
-              </div>
-            </div>
-            
-            <div class="item">
-              <div class="icon">
-                <img src="{{asset('assets/images/service-icon-03.png')}}" alt="">
-              </div>
-              <div class="down-content">
-                <h4>Best Students</h4>
-                <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non vestibulum.</p>
-              </div>
-            </div>
-            
-            <div class="item">
-              <div class="icon">
-                <img src="{{asset('assets/images/service-icon-02.png')}}" alt="">
-              </div>
-              <div class="down-content">
-                <h4>Online Meeting</h4>
-                <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non vestibulum.</p>
-              </div>
-            </div>
-            
-            <div class="item">
-              <div class="icon">
-                <img src="{{asset('assets/images/service-icon-03.png')}}" alt="">
-              </div>
-              <div class="down-content">
-                <h4>Best Networking</h4>
-                <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non vestibulum.</p>
-              </div>
-            </div>
-            
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+
 
   <section class="upcoming-meetings" id="meetings">
     <div class="container">
@@ -669,13 +659,74 @@
         </div>
       </div>
     </div>
-@include('footer')
   </section>
 @endsection
 
 @section('scripts')
-    <script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+      const swiper = new Swiper('#eventSwiper', {
+          loop: true, // Enables continuous loop mode
+          navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+          },
+          pagination: {
+              el: '.swiper-pagination',
+              clickable: true,
+          },
+          autoplay: {
+              delay: 3000, // 3 seconds
+              disableOnInteraction: false,
+          },
+          effect: 'fade', // Optional: Change effect to fade
+      });
+  });
 
-      
-    </script>
+
+  //according to loftblog tut
+  $('.nav li:first').addClass('active');
+
+var showSection = function showSection(section, isAnimate) {
+    var
+    direction = section.replace(/#/, ''),
+    reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+    reqSectionPos = reqSection.offset().top - 0;
+
+    if (isAnimate) {
+        $('body, html').animate({
+            scrollTop: reqSectionPos },
+        800);
+    } else {
+        $('body, html').scrollTop(reqSectionPos);
+    }
+};
+
+var checkSection = function checkSection() {
+    $('.section').each(function () {
+        var
+        $this = $(this),
+        topEdge = $this.offset().top - 80,
+        bottomEdge = topEdge + $this.height(),
+        wScroll = $(window).scrollTop();
+        if (topEdge < wScroll && bottomEdge > wScroll) {
+            var
+            currentId = $this.data('section'),
+            reqLink = $('a').filter('[href*=\\#' + currentId + ']');
+            reqLink.closest('li').addClass('active').
+            siblings().removeClass('active');
+        }
+    });
+};
+
+$('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function (e) {
+    e.preventDefault();
+    showSection($(this).attr('href'), true);
+});
+
+$(window).scroll(function () {
+    checkSection();
+});
+</script>
+
     @endsection

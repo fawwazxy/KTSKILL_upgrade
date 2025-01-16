@@ -13,3 +13,7 @@ Route::get('/meeting', function () {
 Route::get('/meeting-detail', function () {
     return view('meetingDetails'); 
 });
+
+Route::get('/test', function () {
+    return view('test'); 
+});

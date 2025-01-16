@@ -5,10 +5,14 @@
             <div class="col-12">
                 <nav class="main-nav">
                     <!-- ***** Logo Start ***** -->
+                    <!-- ***** Logo Start ***** -->
                     <a href="{{ url('/') }}" class="logo">
-                        Edu Meeting
+                        <img src="{{ asset('assets/images/logo.jpg') }}" alt="Logo" style="width: 20%;">
                     </a>
                     <!-- ***** Logo End ***** -->
+
+                    <!-- ***** Logo End ***** -->
+
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
                         <li class="scroll-to-section">
@@ -42,40 +46,22 @@
             </div>
         </div>
     </div>
-
-    <!-- Contact Information Section -->
-    <div class="contact-info">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <p>Email: <a href="mailto:info@edumeeting.com">info@edumeeting.com</a></p>
-                </div>
-                <div class="col-md-4">
-                    <p>Phone: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
-                </div>
-                <div class="col-md-4">
-                    <p>Business Hours: Mon-Fri, 9 AM - 5 PM</p>
-                </div>
+ <!-- Contact Information Section -->
+ <div class="contact-info">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <p>Email: <a href="mailto:info@edumeeting.com">info@edumeeting.com</a></p>
+            </div>
+            <div class="col-md-4">
+                <p>Phone: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+            </div>
+            <div class="col-md-4">
+                <p>Business Hours: Mon-Fri, 9 AM - 5 PM</p>
             </div>
         </div>
     </div>
-
-    <!-- News Ticker Section -->
-    <div class="news-ticker">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="ticker">
-                        <marquee behavior="scroll" direction="left">
-                            <span>Latest News: Our next meeting is scheduled for next Friday. Don't miss it!</span>
-                            <span>Latest News: New courses are available for enrollment!</span>
-                            <span>Latest News: Join us for our upcoming webinar on educational trends.</span>
-                        </marquee>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+</div>
 </header>
 
 <style>
@@ -86,14 +72,5 @@
     }
     .contact-info p {
         margin: 0;
-    }
-    .news-ticker {
-        background-color: #343a40;
-        color: white;
-        padding: 10px 0;
-        text-align: center;
-    }
-    .news-ticker .ticker {
-        overflow: hidden;
     }
 </style>
