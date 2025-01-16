@@ -120,11 +120,6 @@
     max-height: 100%;
     border-radius: 50%;
 }
-</style>
-  <section class="section main-banner" id="top" data-section="section1">
-      <video autoplay muted loop id="bg-video">
-          <source src="{{asset('assets/images/course-video.mp4')}}" type="video/mp4" />
-      </video>
 
 .swiper-container {
     width: 100%; /* Full width */
@@ -149,9 +144,6 @@
     height: 100%;
     object-fit: cover; /* Ensures the image covers the slide without distortion */
 }
-
-
-
 </style>
 
 <div class="swiper-container header-text" id="eventSwiper">
@@ -188,65 +180,6 @@
 
 
   <!-- ***** Main Banner Area End ***** -->
-
-
-  <section class="services">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="owl-service-item owl-carousel">
-          
-            <div class="item">
-              <div class="icon">
-                <img src="{{asset('assets/images/service-icon-01.png')}}" alt="">
-              </div>
-              <div class="down-content">
-                <h4>Best Education</h4>
-                <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non vestibulum.</p>
-              </div>
-            </div>
-            
-            <div class="item">
-              <div class="icon">
-                <img src="{{asset('assets/images/service-icon-02.png')}}" alt="">
-              </div>
-              <div class="down-content">
-                <h4>Best Teachers</h4>
-                <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non vestibulum.</p>
-              </div>
-            </div>
-            
-            <div class="item">
-              <div class="icon">
-                <img src="{{asset('assets/images/service-icon-03.png')}}" alt="">
-              </div>
-              <div class="down-content">
-                <h4>Best Students</h4>
-                <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non vestibulum.</p>
-              </div>
-            </div>
-            
-            <div class="item">
-              <div class="icon">
-                <img src="{{asset('assets/images/service-icon-02.png')}}" alt="">
-              </div>
-              <div class="down-content">
-                <h4>Online Meeting</h4>
-                <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non vestibulum.</p>
-              </div>
-            </div>
-            
-            <div class="item">
-              <div class="icon">
-                <img src="{{asset('assets/images/service-icon-03.png')}}" alt="">
-              </div>
-              <div class="down-content">
-                <h4>Best Networking</h4>
-                <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non vestibulum.</p>
-              </div>
-            </div>
-            
-          </div>
           
           <div class="social-icons">
   <button>
