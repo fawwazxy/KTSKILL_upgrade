@@ -2,7 +2,7 @@
 
 @section('content')
     <section class="heading-page header-text" id="top">
-        <div class="container">
+        <div class="container text-center">
             <div class="row">
                 <div class="col-lg-12">
                     <h2>{{ $title }}</h2>
@@ -39,35 +39,54 @@
             </ul>
             <div class="tab-content" id="courseInfoContent">
                 <div class="tab-pane fade show active" id="modules" role="tabpanel" aria-labelledby="modules-tab">
-                    <p>{{ $modules }}</p>
+                    <div class="tab-card">
+                        <p>{{ $modules }}</p>
+                    </div>
                 </div>
                 <div class="tab-pane fade" id="fees" role="tabpanel" aria-labelledby="fees-tab">
-                    <p>{{ $fees }}</p>
+                    <div class="tab-card">
+                        <p>{{ $fees }}</p>
+                    </div>
                 </div>
                 <div class="tab-pane fade" id="duration" role="tabpanel" aria-labelledby="duration-tab">
-                    <p>{{ $duration }}</p>
+                    <div class="tab-card">
+                        <p>{{ $duration }}</p>
+                    </div>
                 </div>
                 <div class="tab-pane fade" id="prerequisites" role="tabpanel" aria-labelledby="prerequisites-tab">
-                    <p>{{ $prerequisites }}</p>
+                    <div class="tab-card">
+                        <p>{{ $prerequisites }}</p>
+                    </div>
                 </div>
                 <div class="tab-pane fade" id="syllabus" role="tabpanel" aria-labelledby="syllabus-tab">
-                    <p>{{ $syllabus }}</p>
+                    <div class="tab-card">
+                        <p>{{ $syllabus }}</p>
+                    </div>
                 </div>
                 <div class="tab-pane fade" id="financing" role="tabpanel" aria-labelledby="financing-tab">
-                    <p>{{ $financing }}</p>
+                    <div class="tab-card">
+                        <p>{{ $financing }}</p>
+                    </div>
                 </div>
                 <div class="tab-pane fade" id="career" role="tabpanel" aria-labelledby="career-tab">
-                    <p>{{ $career }}</p>
+                    <div class="tab-card">
+                        <p>{{ $career }}</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <style>
+        /* Tabs Styling */
         .nav-tabs .nav-link {
             border: none;
             border-radius: 0;
             color: #007bff;
+            font-weight: 500;
+            text-transform: uppercase;
+            padding: 10px 20px;
+            margin-bottom: 0;
         }
 
         .nav-tabs .nav-link.active {
@@ -76,14 +95,22 @@
         }
 
         .course-details {
-            margin-top: 20px;
+            margin-top: 30px;
         }
 
         .tab-content {
-            padding: 20px;
-            background: white;
+            padding: 25px;
+            background: #fff;
             border: 1px solid #ddd;
             border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .tab-card {
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            margin-bottom: 20px;
         }
 
         /* Responsive Design */
@@ -100,8 +127,26 @@
             }
 
             .tab-content {
-                padding: 15px;
+                padding: 20px;
             }
+
+            .tab-card {
+                padding: 10px;
+            }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #007bff;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background-color: #f0f4f8;
         }
     </style>
 
