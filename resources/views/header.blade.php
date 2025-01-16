@@ -16,15 +16,27 @@
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
                         <li class="scroll-to-section">
-                            <a href="{{ url('/') }}" class="{{ request()->is('/') ? 'active' : '' }}">Home</a>
+                            <a href="{{ url('/') }}" class="{{ request()->is('/') ? 'active' : '' }}">Utama</a>
+                        </li>
+                        <li class="scroll-to-section">
+                            <a href="{{ url('/InfoKorporat') }}" class="{{ request()->is('/InfoKorporat') ? 'active' : '' }}">Info Korporat</a>
                         </li>
                         <li class="scroll-to-section">
                             <a href="{{ url('course') }}" class="{{ request()->is('course') ? 'active' : '' }}">Courses</a>
                         </li>
                         <li class="scroll-to-section">
-                            <a href="#contact" class="{{ request()->is('contact') ? 'active' : '' }}">Contact Us</a>
+                            <a href="{{ url('/ProgramAktiviti') }}" class="{{ request()->is('/ProgramAktiviti') ? 'active' : '' }}">Program & Aktiviti</a>
                         </li>
-                    </ul>        
+                        <li class="scroll-to-section">
+                            <a href="{{ url('/Pelawat') }}" class="{{ request()->is('/Pelawat') ? 'active' : '' }}">Pelawat</a>
+                        </li>
+                        <li class="scroll-to-section">
+                            <a href="{{ url('/Kakitangan') }}" class="{{ request()->is('/Kakitangan') ? 'active' : '' }}">Kakitangan</a>
+                        </li>
+                        <li class="scroll-to-section">
+                            <a href="/contact" class="{{ request()->is('/contact') ? 'active' : '' }}">Hubungi Kami</a>
+                        </li>
+                    </ul>
                     <a class='menu-trigger'>
                         <span>Menu</span>
                     </a>

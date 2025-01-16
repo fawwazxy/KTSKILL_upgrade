@@ -6,12 +6,8 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
-Route::get('/meeting', function () {
-    return view('meeting');
-});
-
-Route::get('/meeting-detail', function () {
-    return view('meetingDetails');
+Route::get('/InfoKorporat', function () {
+    return view('InfoKorporat');
 });
 
 Route::get('/course', function () {
@@ -61,6 +57,18 @@ Route::get('/course/{course}', function ($course) {
     }
 });
 
-Route::get('/test', function () {
-    return view('test'); 
+Route::get('/ProgramAktiviti', function () {
+    return view('ProgramAktiviti');
+});
+
+Route::get('/Pelawat', function () {
+    return view('Pelawat');
+});
+
+Route::get('/Kakitangan', function () {
+    return view('Kakitangan');
+});
+
+Route::get('/contact', function () {
+    return view('contact');
 });
