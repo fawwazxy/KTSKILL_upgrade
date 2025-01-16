@@ -13,6 +13,118 @@
     padding: 10px;
     border-radius: 5px;
 }
+/* In your CSS file (e.g., style.css) */
+/* In your CSS file (e.g., style.css) */
+.social-icons {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  z-index: 100;
+}
+
+.social-icons ul {
+  list-style: none;
+  padding: 0;
+  display: none; /* Initially hide the list */
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-icons button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f1f1f1;
+  transition: background-color 0.3s;
+  color: #333;
+}
+
+.social-icons button:hover {
+  background-color: #e0e0e0;
+  color: #000;
+}
+
+.social-icons button:focus {
+  outline: none;
+}
+
+.social-icons.active ul {
+  display: flex; /* Show the list on click */
+}
+
+.social-icons li {
+  margin-bottom: 10px;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f1f1f1;
+  transition: background-color 0.3s;
+  color: #333;
+}
+
+.social-icons a:hover {
+  background-color: #e0e0e0;
+  color: #000;
+}
+
+.social-icons {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  z-index: 100;
+}
+
+.social-icons ul {
+  list-style: none;
+  padding: 0;
+  display: none; /* Initially hide the list */
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-icons button {
+  /* ... your button styles ... */
+}
+
+.social-icons.active ul {
+  display: flex; /* Show the list when 'active' class is added */
+}
+
+/* Rest of your CSS for other elements remains the same */
+
+/* For the service icons (no changes needed) */
+.icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f1f1;
+}
+
+.icon img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 50%;
+}
+</style>
+  <section class="section main-banner" id="top" data-section="section1">
+      <video autoplay muted loop id="bg-video">
+          <source src="{{asset('assets/images/course-video.mp4')}}" type="video/mp4" />
+      </video>
 
 .swiper-container {
     width: 100%; /* Full width */
@@ -78,6 +190,80 @@
   <!-- ***** Main Banner Area End ***** -->
 
 
+  <section class="services">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="owl-service-item owl-carousel">
+          
+            <div class="item">
+              <div class="icon">
+                <img src="{{asset('assets/images/service-icon-01.png')}}" alt="">
+              </div>
+              <div class="down-content">
+                <h4>Best Education</h4>
+                <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non vestibulum.</p>
+              </div>
+            </div>
+            
+            <div class="item">
+              <div class="icon">
+                <img src="{{asset('assets/images/service-icon-02.png')}}" alt="">
+              </div>
+              <div class="down-content">
+                <h4>Best Teachers</h4>
+                <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non vestibulum.</p>
+              </div>
+            </div>
+            
+            <div class="item">
+              <div class="icon">
+                <img src="{{asset('assets/images/service-icon-03.png')}}" alt="">
+              </div>
+              <div class="down-content">
+                <h4>Best Students</h4>
+                <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non vestibulum.</p>
+              </div>
+            </div>
+            
+            <div class="item">
+              <div class="icon">
+                <img src="{{asset('assets/images/service-icon-02.png')}}" alt="">
+              </div>
+              <div class="down-content">
+                <h4>Online Meeting</h4>
+                <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non vestibulum.</p>
+              </div>
+            </div>
+            
+            <div class="item">
+              <div class="icon">
+                <img src="{{asset('assets/images/service-icon-03.png')}}" alt="">
+              </div>
+              <div class="down-content">
+                <h4>Best Networking</h4>
+                <p>Suspendisse tempor mauris a sem elementum bibendum. Praesent facilisis massa non vestibulum.</p>
+              </div>
+            </div>
+            
+          </div>
+          
+          <div class="social-icons">
+  <button>
+    <i class="fa fa-share-alt"></i> 
+  </button>
+  <ul>
+    <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+    <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+    <li><a href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+    <li><a href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
+    <li><a href="#" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
+  </ul>
+</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section class="upcoming-meetings" id="meetings">
     <div class="container">
@@ -727,6 +913,12 @@ $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function 
 $(window).scroll(function () {
     checkSection();
 });
-</script>
 
+const socialButton = document.querySelector('.social-icons button');
+const socialList = document.querySelector('.social-icons ul');
+
+socialButton.addEventListener('click', () => {
+  socialButton.parentElement.classList.toggle('active'); 
+});
+    </script>
     @endsection
