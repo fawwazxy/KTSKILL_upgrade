@@ -78,7 +78,8 @@
     </section>
 
     <style>
-        /* Tabs Styling */
+      
+            /* Tabs Styling */
         .nav-tabs .nav-link {
             border: none;
             border-radius: 0;
@@ -96,6 +97,7 @@
 
         .course-details {
             margin-top: 30px;
+            margin-bottom: 50px; /* Add this line for spacing between course details and footer */
         }
 
         .tab-content {
