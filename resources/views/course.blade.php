@@ -5,8 +5,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h6>Browse through our available courses</h6>
-                    <h2>Courses</h2>
+                    <h2>Kursus</h2>
+                    <h6>Senarai Kursus Yang Menarik Ditawarkan</h6>
                 </div>
             </div>
         </div>
@@ -18,7 +18,7 @@
                 <div class="col">
                     <div class="card course-card" style="cursor: pointer;">
                         <a href="{{ url('/course/Pemasangan & Penyelenggaraan Elektrik - Satu Fasa') }}">
-                            <img src="path/to/laravel-image.jpg" class="card-img-top" alt="Laravel Course">
+                            <img src="path/to/laravel-image.jpg" class="card-img-top">
                             <div class="card-body">
                                 <h5 class="card-title">Pemasangan & Penyelenggaraan Elektrik - Satu Fasa</h5>
                                 <p class="card-text">Learn electrical installation and maintenance for single-phase systems.</p>
@@ -33,7 +33,7 @@
                 <div class="col">
                     <div class="card course-card" style="cursor: pointer;">
                         <a href="{{ url('/course/Pemasangan & Penyelenggaraan Satu Fasa Penyaman Udara, Pengudaraan, Pemanasan (HVAC)') }}">
-                            <img src="path/to/react-image.jpg" class="card-img-top" alt="React Course">
+                            <img src="path/to/react-image.jpg" class="card-img-top">
                             <div class="card-body">
                                 <h5 class="card-title">Pemasangan & Penyelenggaraan Satu Fasa Penyaman Udara, Pengudaraan, Pemanasan (HVAC)</h5>
                                 <p class="card-text">Learn HVAC systems maintenance and installation for single-phase systems.</p>
@@ -47,7 +47,7 @@
                 <div class="col">
                     <div class="card course-card" style="cursor: pointer;">
                         <a href="{{ url('/course/Operasi Pemesinan') }}">
-                            <img src="path/to/python-image.jpg" class="card-img-top" alt="Python Course">
+                            <img src="path/to/python-image.jpg" class="card-img-top"php>
                             <div class="card-body">
                                 <h5 class="card-title">Operasi Pemesinan</h5>
                                 <p class="card-text">Learn machining operations for industrial applications.</p>
