@@ -48,28 +48,29 @@
             background-color: #e0e0e0;
             color: #000;
         }
+
         /* Other styles... */
         .swiper-container {
-            width: 100%; /* Full width */
-            height: 50vh; /* Adjust height based on your preference */
-            max-height: 600px; /* Optional: Limit the maximum height */
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-        }
+    width: 100%; /* Full width */
+    height: 80vh; /* Increased height */
+    max-height: none; /* Remove the height limit if needed */
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    padding: 20px
+}
+
 
         .swiper-slide {
             display: flex;
             justify-content: center;
             align-items: center;
             position: relative;
-            background-color: #000; /* Optional: Fallback background color */
+            background-color: grey; /* Optional: Fallback background color */
         }
 
         .swiper-slide img {
-            width: 100%;
             height: 100%;
-            object-fit: cover; /* Ensures the image covers the slide without distortion */
         }
     </style>
 
@@ -98,8 +99,7 @@
             </div>
         </div>
         <!-- Add navigation buttons -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
+ 
         <!-- Add pagination -->
         <div class="swiper-pagination"></div>
     </div>

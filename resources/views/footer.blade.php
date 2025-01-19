@@ -44,7 +44,7 @@
 <style>
     .footer {
         width: 100%; /* Full width */
-        background-color: #1a1535;
+        background-color: rgba(0, 81, 180, 0.786);
         color: #ffffff;
         padding: 20px 0;
     }
