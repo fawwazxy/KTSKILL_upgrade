@@ -47,6 +47,7 @@
         background-color: rgba(0, 81, 180, 0.786);
         color: #ffffff;
         padding: 20px 0;
+        margin-top: 30px;
     }
 
     .footer a {
