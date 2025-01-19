@@ -23,30 +23,9 @@
         .social-icons ul {
             list-style: none;
             padding: 0;
-            display: none; /* Initially hide the list */
+            display: flex; /* Show the list directly */
             flex-direction: column;
             align-items: center;
-        }
-
-        .social-icons button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: #f1f1f1;
-            transition: background-color 0.3s;
-            color: #333;
-        }
-
-        .social-icons button:hover {
-            background-color: #e0e0e0;
-            color: #000;
-        }
-
-        .social-icons.active ul {
-            display: flex; /* Show the list when 'active' class is added */
         }
 
         .social-icons li {
@@ -69,7 +48,6 @@
             background-color: #e0e0e0;
             color: #000;
         }
-
         /* Other styles... */
         .swiper-container {
             width: 100%; /* Full width */
@@ -129,14 +107,10 @@
 
     <!-- ***** Main Banner Area End ***** -->
     <div class="social-icons">
-        <button>
-            <i class="fa fa-share-alt"></i>
-        </button>
         <ul>
-            <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-            <li><a href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="https://www.facebook.com/ktskillterengganu/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="https://www.tiktok.com/@ktskill_institute" target="_blank"><i class="fab fa-tiktok"></i></a></li>
+            <li><a href="https://www.instagram.com/ktskill_institute/" target="_blank"><i class="fa fa-instagram"></i></a></li>
             <li><a href="#" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
         </ul>
     </div>
@@ -566,11 +540,6 @@
                     disableOnInteraction: false,
                 },
                 effect: 'fade', // Optional: Change effect to fade
-            });
-
-            const socialButton = document.querySelector('.social-icons button');
-            socialButton.addEventListener('click', () => {
-                socialButton.parentElement.classList.toggle('active');
             });
         });
 

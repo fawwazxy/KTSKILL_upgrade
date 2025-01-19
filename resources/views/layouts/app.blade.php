@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="TemplateMo">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>Education Meeting HTML5 Template</title>
 
     <!-- Bootstrap core CSS -->
@@ -38,13 +38,13 @@
     <!-- Main Content Area -->
         @yield('content')
 
-    
+
     @include('footer')
     @include('messageslider')
 
 
 
-    @yield('scripts') 
+    @yield('scripts')
 
     <!-- Scripts -->
     <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
