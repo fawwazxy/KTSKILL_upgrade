@@ -57,7 +57,7 @@
         .card-body {
             position: relative; /* Set position to relative for absolute positioning of overlay */
             padding: 25px;
-            height: 200px; /* Set a fixed height for the card body */
+            height: 250px; /* Increase the fixed height for the card body */
             display: flex; /* Use flexbox */
             flex-direction: column; /* Stack children vertically */
             justify-content: space-between; /* Space out children */
@@ -75,7 +75,7 @@
             justify-content: center; /* Center the content horizontally */
             opacity: 0; /* Start hidden */
             transition: opacity 0.3s ease; /* Smooth transition for opacity */
-            padding: 10px; /* Add some padding */
+            padding: 15px; /* Increase padding for better spacing */
         }
 
         .course-card:hover .overlay {
