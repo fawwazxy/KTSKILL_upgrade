@@ -38,6 +38,79 @@
             background-color: #e0e0e0;
             color: #000;
         }
+
+        /* Style for course cards */
+        .course-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex; /* Use flexbox */
+            flex-direction: column; /* Stack children vertically */
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-body {
+            padding: 25px;
+            flex-grow: 1; /* Allow the card body to grow */
+            display: flex; /* Use flexbox */
+            flex-direction: column; /* Stack children vertically */
+            justify-content: space-between; /* Space out children */
+            height: 200px; /* Set a fixed height */
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .card-text {
+            color: #555;
+            margin-bottom: 15px;
+            font-size: 1rem;
+            flex-grow: 1; /* Allow the text to grow */
+            overflow: hidden; /* Hide overflow */
+            text-overflow: ellipsis; /* Add ellipsis for overflow text */
+            display: -webkit-box; /* For ellipsis */
+            -webkit-box-orient: vertical; /* For ellipsis */
+            -webkit-line-clamp: 3; /* Limit to 3 lines */
+        }
+
+        .heading-page {
+            padding: 60px 0;
+            background: #003366;
+            color: white;
+        }
+
+        .heading-page h2 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-top: 15px;
+        }
+
+        .heading-page h6 {
+            font-size: 1.2rem;
+            font-weight: 400;
+        }
+
+        @media (max-width: 768px) {
+            .heading-page h2 {
+                font-size: 2rem;
+            }
+
+            .card-title {
+                font-size: 1.1rem;
+            }
+
+            .card-text {
+                font-size: 0.9rem;
+            }
+        }
     </style>
     <section class="heading-page header-text" id="top">
         <div class="container">
