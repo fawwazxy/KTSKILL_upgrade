@@ -78,7 +78,7 @@
     </section>
 
     <style>
-      
+
             /* Tabs Styling */
         .nav-tabs .nav-link {
             border: none;
