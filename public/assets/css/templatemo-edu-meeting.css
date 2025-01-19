@@ -192,11 +192,10 @@ body {
   margin-top: 0px;
   margin-bottom: 50px; 
   padding-bottom: 20px;
-  border-bottom: 1px solid rgba(250,250,250,0.15);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
   font-size: 22px;
   font-weight: 700;
   text-transform: uppercase;
-  color: #fff;
 }
 
 
@@ -914,7 +913,7 @@ section.upcoming-meetings .categories ul li {
 
 section.upcoming-meetings .categories ul li a {
   font-size: 15px;
-  color: #1f272b;
+  color: #ffffff;
   font-weight: 500;
   transition: all .3s;
 }
@@ -1105,7 +1104,7 @@ section.our-courses {
 }
 
 .our-courses .item .down-content {
-  background-color: #fff;
+  background-color: rgba(0, 81, 180, 0.786);
 }
 
 .our-courses .item .down-content h4 {
@@ -1320,7 +1319,7 @@ section.contact-us {
 }
 
 section.contact-us #contact {
-  background-color: #fff;
+  background-color: rgba(0, 81, 180, 0.786);
   border-radius: 20px;
   padding: 40px;
 }
@@ -1385,7 +1384,7 @@ section.contact-us #contact button:hover {
 }
 
 section.contact-us .right-info {
-  background-color: #a12c2f;
+  background-color: rgba(0, 81, 180, 0.786);
   border-radius: 20px;
   padding: 40px;
 }
