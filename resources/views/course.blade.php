@@ -2,42 +2,7 @@
 
 @section('content')
     <style>
-        .social-icons {
-            position: fixed;
-            top: 50%;
-            right: 20px;
-            transform: translateY(-50%);
-            z-index: 100;
-        }
-
-        .social-icons ul {
-            list-style: none;
-            padding: 0;
-            display: flex; /* Show the list directly */
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .social-icons li {
-            margin-bottom: 10px;
-        }
-
-        .social-icons a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: #f1f1f1;
-            transition: background-color 0.3s;
-            color: #333;
-        }
-
-        .social-icons a:hover {
-            background-color: #e0e0e0;
-            color: #000;
-        }
+    
 
         /* Style for course cards */
         .course-card {

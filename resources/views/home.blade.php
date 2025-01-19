@@ -12,42 +12,7 @@
             border-radius: 5px;
         }
 
-        .social-icons {
-            position: fixed;
-            top: 50%;
-            right: 20px;
-            transform: translateY(-50%);
-            z-index: 100;
-        }
-
-        .social-icons ul {
-            list-style: none;
-            padding: 0;
-            display: flex; /* Show the list directly */
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .social-icons li {
-            margin-bottom: 10px;
-        }
-
-        .social-icons a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: rgba(0, 81, 180, 0.786);
-            transition: background-color 0.3s;
-            color: #ffffff;
-        }
-
-        .social-icons a:hover {
-            background-color: #e0e0e0;
-            color: #000;
-        }
+        
 
         /* Other styles... */
         .swiper-container {
