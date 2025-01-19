@@ -65,7 +65,7 @@
 
 <style>
     .contact-info {
-        background-color: #f8f9fa;
+        background-color: rgba(0, 81, 180, 0.786);
         padding: 10px 0;
         text-align: center;
     }

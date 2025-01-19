@@ -270,7 +270,7 @@ header
 }
 
 .header-area {
-  background-color: rgba(0, 81, 180, 0.786);
+  background-color: rgba(255, 255, 255, 0.786);
   z-index: 100;
   -webkit-transition: all .5s ease 0s;
   -moz-transition: all .5s ease 0s;
@@ -332,7 +332,7 @@ header
   font-weight: 500;
   font-size: 14px;
   text-transform: uppercase;
-  color: #fff;
+  color: #000000;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -345,12 +345,12 @@ header
 
 .header-area .main-nav .nav li:hover a,
 .header-area .main-nav .nav li a.active {
-  color: #f5a425!important;
+  color: rgba(0, 81, 180, 0.786)!important;
 }
 
 .background-header .main-nav .nav li:hover a,
 .background-header .main-nav .nav li a.active {
-  color: #f5a425!important;
+  color: rgba(0, 81, 180, 0.786)!important;
   opacity: 1;
 }
 
