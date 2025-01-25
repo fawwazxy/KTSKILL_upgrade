@@ -90,7 +90,7 @@
                                 <img src="path/to/related-image.jpg" class="card-img-top" alt="{{ $relatedCourse }}">
                                 <div class="card-body">
                                     <h5 class="card-title">{{ $relatedCourse }}</h5>
-                                    <p class="card-text">Brief description of the related course.</p>
+                                    <p class="card-text">{{ $courseData['description'] }}</p>
                                 </div>
                             </a>
                         </div>
