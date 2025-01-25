@@ -48,7 +48,6 @@
         }
 
         .contact-info {
-
             margin-top: 40px;
             background-color: #fff;
             padding: 30px;
@@ -59,6 +58,36 @@
         .contact-info h5 {
             font-weight: bold;
             color: #003366; /* Dark blue color */
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center; /* Center items vertically */
+            margin-bottom: 15px;
+            padding: 15px;
+            border: 1px solid #e0e0e0; /* Light border */
+            border-radius: 5px; /* Rounded corners */
+            background-color: #f8f9fa; /* Light background for items */
+            height: 100px; /* Set a fixed height for uniformity */
+        }
+
+        .info-item i {
+            font-size: 1.5rem;
+            color: #007bff; /* Blue color for icons */
+            margin-right: 10px;
+        }
+
+        .map-container {
+            margin-top: 20px;
+            border: 1px solid #e0e0e0; /* Light border for the map */
+            border-radius: 5px; /* Rounded corners */
+            overflow: hidden; /* Ensure the map fits within the container */
+        }
+
+        .map-container iframe {
+            width: 100%; /* Full width */
+            height: 600px; /* Adjust height as needed */
+            border: 0; /* Remove default border */
         }
 
         .contact-form {
@@ -78,23 +107,6 @@
         .contact-form p {
 
             text-align: center;
-        }
-
-        .info-item {
-            display: flex;
-            align-items: center; /* Center items vertically */
-            margin-bottom: 15px;
-            padding: 15px;
-            border: 1px solid #e0e0e0; /* Light border */
-            border-radius: 5px; /* Rounded corners */
-            background-color: #f8f9fa; /* Light background for items */
-            height: 100px; /* Set a fixed height for uniformity */
-        }
-
-        .info-item i {
-            font-size: 1.5rem;
-            color: #007bff; /* Blue color for icons */
-            margin-right: 10px;
         }
     </style>
 
@@ -133,6 +145,16 @@
                 </div>
             </div>
 
+            <!-- Map Section -->
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.9580369177634!2d103.15940381476466!3d5.2692227961771625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31b7bfe643d18631%3A0x95c5a3124ba61002!2sInstitut%20KT%20Skill!5e0!3m2!1sen!2smy!4v1674720084168!5m2!1sen!2smy"
+                    allowfullscreen=""
+                    aria-hidden="false"
+                    tabindex="0">
+                </iframe>
+            </div>
+
             <!-- Contact Form Section -->
             <div class="contact-form">
                 <h5>Send us a message</h5>
@@ -154,8 +176,6 @@
                     <button type="submit" class="btn btn-primary">Send Message</button>
                 </form>
             </div>
-
-            
         </div>
     </section>
 
