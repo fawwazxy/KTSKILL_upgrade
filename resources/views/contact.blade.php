@@ -120,7 +120,7 @@
                 <div class="row">
                     <div class="col-md-6" style="padding-top: 20px">
                         <div class="info-item d-flex align-items-center justify-content-start">
-                            <i class="fa fa-map-marker-alt"></i>
+                            <i class="fas fa-map-marker-alt"></i>
                             <p class="ml-2"><strong>Location:</strong> F18-F27 Kawasan Perindustrian Chendering, 21080 Kuala Terengganu, Terengganu</p>
                         </div>
                     </div>
