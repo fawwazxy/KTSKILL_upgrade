@@ -109,21 +109,49 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-md-4">
+                    <div class="card shadow-sm text-center h-100 bg-light">
+                        <img src="path/to/leader1.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Leader 1" style="width: 150px;">
+                        <div class="card-body">
+                            <h5 class="card-title">Leader Name 1</h5>
+                            <p class="card-text text-muted">Position/Role</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-sm text-center h-100 bg-light">
+                        <img src="path/to/leader1.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Leader 1" style="width: 150px;">
+                        <div class="card-body">
+                            <h5 class="card-title">Leader Name 1</h5>
+                            <p class="card-text text-muted">Position/Role</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-sm text-center h-100 bg-light">
+                        <img src="path/to/leader1.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Leader 1" style="width: 150px;">
+                        <div class="card-body">
+                            <h5 class="card-title">Leader Name 1</h5>
+                            <p class="card-text text-muted">Position/Role</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-sm text-center h-100 bg-light">
+                        <img src="path/to/leader1.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Leader 1" style="width: 150px;">
+                        <div class="card-body">
+                            <h5 class="card-title">Leader Name 1</h5>
+                            <p class="card-text text-muted">Position/Role</p>
+                        </div>
+                    </div>
+                </div>
                 <!-- Add more leaders as needed -->
             </div>
         </div>
     </section>
 
-    <!-- Carta Fungsi Section -->
-    <section id="carta-fungsi" class="custom-section bg-light text-dark shadow-sm">
-        <div class="container text-center">
-            <h2 class="section-title">Carta Fungsi</h2>
-            <img src="{{ asset('path/to/carta-fungsi.png') }}" alt="Carta Fungsi" class="img-fluid rounded shadow-sm">
-        </div>
-    </section>
-
     <!-- Carta Organisasi Section -->
-    <section id="carta-organisasi" class="custom-section bg-dark text-light">
+    <section id="carta-organisasi" class="custom-section bg-white text-dark">
         <div class="container text-center">
             <h2 class="mb-4">Carta Organisasi</h2>
             <img src="path/to/carta-organisasi.png" alt="Carta Organisasi" class="img-fluid rounded shadow-sm">
