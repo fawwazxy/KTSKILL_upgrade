@@ -310,7 +310,7 @@
 
             .card-body {
                 flex-grow: 1; /* Allow the card body to grow and fill the space */
-            }
+            }}
     </style>
 
     <script>
