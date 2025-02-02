@@ -12,7 +12,7 @@
             border-radius: 5px;
         }
 
-        
+
 
         /* Other styles... */
         .swiper-container {
@@ -55,7 +55,7 @@
         }
 
 
-        
+
         .card {
     border: none;
     margin-bottom: 30px;
@@ -129,7 +129,7 @@
             </div>
         </div>
         <!-- Add navigation buttons -->
- 
+
         <!-- Add pagination -->
         <div class="swiper-pagination"></div>
     </div>
@@ -152,9 +152,9 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <h2>Tentang Kami</h2>
-                            <h3 style = "font-size: 20px"> Sebuah institusi pengajian yang telah berdaftar dengan Jabatan Pembangunan Kemahiran, 
-                                Kementerian Sumber Manusia, dalam menyediakan kursus pendidikan dan latihan teknikal dan vokasional (TVET) 
-                                untuk para pelajar, sesuai dengan standard pekerjaan yang diiktiraf, dengan penekanan kepada komponen praktikal, 
+                            <h3 style = "font-size: 20px"> Sebuah institusi pengajian yang telah berdaftar dengan Jabatan Pembangunan Kemahiran,
+                                Kementerian Sumber Manusia, dalam menyediakan kursus pendidikan dan latihan teknikal dan vokasional (TVET)
+                                untuk para pelajar, sesuai dengan standard pekerjaan yang diiktiraf, dengan penekanan kepada komponen praktikal,
                                 kemahiran psikomotor dan pendedahan kepada latihan di industri. </h3>
                         </div>
                         <div class="col-lg-6">
@@ -206,15 +206,15 @@
             </div>
             <div class="row">
              <div class="col-md-4">
-                <div class="card" onclick="window.open('{{ url('/course/Pemasangan & Penyelenggaraan Elektrik - Satu Fasa') }}', '_blank')">
+                <div class="card" onclick="window.open('{{ url('/course/Pemasangan & Penyelenggaraan Satu Fasa Penyaman Udara, Pengudaraan, Pemanasan (HVAC)') }}', '_blank')">
                     <img alt="Person installing an air conditioning unit" height="400" src="https://storage.googleapis.com/a1aa/image/ySrCcrsQIcr1E96aNz06eugsVobQOOqkGxayFKvOkQI48PEKA.jpg" width="600"/>
                <div class="card-title">
-                PEMASANGAN &amp; PENYELENGGARAAN SATU FASA PENYAMAN UDARA,
+                   Pemasangan & Penyelenggaraan Satu Fasa Penyaman Udara, Pengudaraan, Pemanasan (HVAC)
                </div>
               </div>
              </div>
              <div class="col-md-4">
-              <div class="card">
+              <div class="card" onclick="window.open('{{ url('/course/Operasi Pemesinan') }}', '_blank')">
                <img alt="Machinery operation in a workshop" height="400" src="https://storage.googleapis.com/a1aa/image/tXukHMqB1LL7Klh1mwKlDosV4kNKM7WPBCbJiA9tKmScePEKA.jpg" width="600"/>
                <div class="card-title">
                 OPERASI PEMESINAN
@@ -222,7 +222,7 @@
               </div>
              </div>
              <div class="col-md-4">
-              <div class="card">
+              <div class="card" onclick="window.open('{{ url('/course/Pemasangan & Penyelenggaraan Elektrik - Satu Fasa') }}', '_blank')">
                <img alt="Placeholder image for electrical maintenance course" height="400" src="https://storage.googleapis.com/a1aa/image/Y18UxqajTzrOLhBnlgfnu8l27sfDS7jUKVlzr16vPLfczfhQB.jpg" width="600"/>
                <div class="card-title">
                 PEMASANGAN &amp; PENYELENGGARAAN ELEKTRIK - SATU FASA
@@ -234,11 +234,11 @@
     </section>
 
     <section class="apply-now" id="apply">
-        
+
     </section>
 
     <section class="our-courses" id="courses">
-       
+
     </section>
 
 @endsection
