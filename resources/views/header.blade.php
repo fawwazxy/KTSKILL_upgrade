@@ -49,13 +49,16 @@
  <div class="contact-info">
     <div class="container">
         <div class="row">
-            <div class="col-md-4">
-                <p>Email: <a href="mailto:info@edumeeting.com">info@edumeeting.com</a></p>
+            <div class="col-md-3">
+                <p>Email: <a href="mailto:ktskill@ktsi.edu.my">ktskill@ktsi.edu.my</a></p>
             </div>
-            <div class="col-md-4">
-                <p>Phone: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+            <div class="col-md-3">
+                <p>Phone: <a href="tel:+6016-6198849">+6016-6198849</a></p>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
+                <p>Fax: <a href="fax:+609-6164410">+609-6164410</a></p>
+            </div>
+            <div class="col-md-3">
                 <p>Business Hours: Mon-Fri, 9 AM - 5 PM</p>
             </div>
         </div>
