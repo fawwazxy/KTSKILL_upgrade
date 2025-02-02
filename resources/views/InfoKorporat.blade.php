@@ -231,15 +231,6 @@
                                 <iframe src="https://www.youtube.com/embed/your-video-id" allowfullscreen></iframe>
                             </div>
                         </section>
-
-                        <!-- Call to Action Section -->
-                        <section class="cta-section">
-                            <div class="container">
-                                <h2>Ready to Start Your Journey?</h2>
-                                <p>Enroll in one of our courses today and start building the career you deserve.</p>
-                                <a href="#enroll-now">Enroll Now</a>
-                            </div>
-                        </section>
                     </div>
                 </div>
             </main>
