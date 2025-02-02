@@ -1,14 +1,20 @@
 <?php
 
+use App\Http\Controllers\InfoKorporatController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home');
 })->name('home');
 
+// Route for the main InfoKorporat page
 Route::get('/InfoKorporat', function () {
     return view('InfoKorporat');
 });
+
+// Route for loading specific sections dynamically
+Route::get('/InfoKorporat/{section}', [InfoKorporatController::class, 'showSection']);
+
 
 Route::get('/course', function () {
     return view('course');
