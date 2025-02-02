@@ -198,41 +198,9 @@
                 </div>
             </nav>
 
-            <!-- Main Content Area -->
+            <!-- Content Area -->
             <main class="col-md-9 ms-sm-auto col-lg-10 px-4">
-                <div class="content-container">
-                    <div id="content-area">
-                        <h2 class="text-custom-blue">Welcome to Our Institute</h2>
-                        <p>Select a section from the left to learn more.</p>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="clickable-container" onclick="loadContent('overview')">
-                                    <h4>Overview</h4>
-                                    <p>Learn about our institute and the courses we offer.</p>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="clickable-container" onclick="loadContent('leadership')">
-                                    <h4>Pemimpin & Eksekutif</h4>
-                                    <p>Meet our leadership team and executive members.</p>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="clickable-container" onclick="loadContent('carta-organisasi')">
-                                    <h4>Carta Organisasi</h4>
-                                    <p>View our organizational chart and structure.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Video Section -->
-                        <section class="video-section">
-                            <div class="container">
-                                <h3>Watch Our Introduction Video</h3>
-                                <iframe src="https://www.youtube.com/embed/your-video-id" allowfullscreen></iframe>
-                            </div>
-                        </section>
-                    </div>
-                </div>
+                <div id="content-area"></div>
             </main>
         </div>
     </div>
@@ -240,6 +208,20 @@
 
 @section('scripts')
     <script>
+
+            function loadMainContent(target) {
+            fetch(`/InfoKorporat/${target}`)
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('content-area').innerHTML = html;
+                })
+                .catch(error => console.error('Error loading content:', error));
+        }
+
+            document.addEventListener("DOMContentLoaded", function () {
+                loadMainContent('overview'); // Auto-load overview content on page load
+        });
+
         function loadContent(target) {
             // Remove active class from all clickable containers
             document.querySelectorAll('.clickable-container').forEach(item => item.classList.remove('active'));
