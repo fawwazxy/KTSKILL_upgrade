@@ -100,23 +100,6 @@
         </div>
     </section>
 
-    <!-- Instructor Profiles Section -->
-    <section class="instructor-profiles" style="padding: 60px 0;">
-        <div class="container">
-            <h2 class="section-title text-center">Meet Our Instructors</h2>
-            <div class="row">
-                @foreach($instructors as $instructor)
-                    <div class="col-md-4">
-                        <div class="instructor-card">
-                            <h5>{{ $instructor->name }}</h5>
-                            <p>{{ $instructor->bio }}</p>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-        </div>
-    </section>
-
     <style>
         /* Tabs Styling */
         .nav-tabs .nav-link {
