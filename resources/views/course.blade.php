@@ -9,27 +9,7 @@
             color: rgba(0, 81, 180, 0.786);
         }
         .sidebar {
-            height: 100vh;
-            padding-top: 20px;
-            border-right: 2px solid rgba(0, 81, 180, 0.3);
-        }
-        .sidebar-title {
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: rgba(0, 81, 180, 0.9);
-            padding-bottom: 10px;
-            border-bottom: 2px solid rgba(0, 81, 180, 0.5);
-        }
-        .nav-link {
-            color: rgba(0, 81, 180, 0.8);
-            font-weight: 500;
-            transition: all 0.3s ease-in-out;
-        }
-        .nav-link:hover, .nav-link.active {
-            background-color: rgba(0, 81, 180, 0.1);
-            color: rgba(0, 81, 180, 1);
-            border-left: 4px solid rgba(0, 81, 180, 1);
-            padding-left: 16px;
+            display: none; /* Hide sidebar */
         }
         .content-container {
             padding: 40px;
@@ -114,11 +94,6 @@
         }
         /* Responsive Design */
         @media (max-width: 768px) {
-            .sidebar {
-                height: auto; /* Allow sidebar to adjust height */
-                border-right: none; /* Remove border on smaller screens */
-                border-bottom: 2px solid rgba(0, 81, 180, 0.3); /* Add bottom border */
-            }
             .content-container {
                 padding: 20px; /* Reduce padding on smaller screens */
             }
@@ -139,23 +114,8 @@
 
     <div class="container-fluid">
         <div class="row">
-            <!-- Sidebar Navigation -->
-            <nav class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
-                <div class="position-sticky">
-                    <h5 class="sidebar-title">Kursus</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#course-list">Senarai Kursus</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#faq">Soalan Lazim</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-
             <!-- Main Content Area -->
-            <main class="col-md-9 ms-sm-auto col-lg-10 px-4">
+            <main class="col-md-12 px-4">
                 <div class="content-container">
                     <section id="course-list">
                         <h2 class="text-custom-blue">Senarai Kursus Yang Menarik Ditawarkan</h2>
