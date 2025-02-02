@@ -22,15 +22,15 @@
                             <div class="filters">
                                 <ul>
                                     <li data-filter="*" class="active">All Meetings</li>
-                                    <li data-filter=".soon">Soon</li>
-                                    <li data-filter=".imp">Important</li>
-                                    <li data-filter=".att">Attractive</li>
+                                    <li data-filter=".year-2024">2024</li> <!-- Filter for 2024 -->
+                                    <li data-filter=".year-2025">2025</li> <!-- Filter for 2025 -->
+                                
                                 </ul>
                             </div>
                         </div>
                         <div class="col-lg-12">
                             <div class="row grid">
-                                <div class="col-lg-4 templatemo-item-col all soon">
+                                <div class="col-lg-4 templatemo-item-col all year-2024">
                                     <div class="meeting-item">
                                         <div class="thumb">
                                             <div class="price">
@@ -47,7 +47,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 templatemo-item-col all imp">
+                                <div class="col-lg-4 templatemo-item-col all year-2024">
                                     <div class="meeting-item">
                                         <div class="thumb">
                                             <div class="price">
@@ -64,7 +64,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 templatemo-item-col all soon">
+                                <div class="col-lg-4 templatemo-item-col all year-2024">
                                     <div class="meeting-item">
                                         <div class="thumb">
                                             <div class="price">
@@ -81,7 +81,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 templatemo-item-col all att">
+                                <div class="col-lg-4 templatemo-item-col all year-2024">
                                     <div class="meeting-item">
                                         <div class="thumb">
                                             <div class="price">
@@ -98,7 +98,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 templatemo-item-col all att">
+                                <div class="col-lg-4 templatemo-item-col all year-2024">
                                     <div class="meeting-item">
                                         <div class="thumb">
                                             <div class="price">
@@ -115,7 +115,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 templatemo-item-col all imp">
+                                <div class="col-lg-4 templatemo-item-col all year-2024">
                                     <div class="meeting-item">
                                         <div class="thumb">
                                             <div class="price">
@@ -132,7 +132,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 templatemo-item-col all imp att">
+                                <div class="col-lg-4 templatemo-item-col all imp year-2024">
                                     <div class="meeting-item">
                                         <div class="thumb">
                                             <div class="price">
@@ -149,7 +149,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 templatemo-item-col all soon imp">
+                                <div class="col-lg-4 templatemo-item-col all soon year-2025">
                                     <div class="meeting-item">
                                         <div class="thumb">
                                             <div class="price">
@@ -166,7 +166,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 templatemo-item-col all att soon">
+                                <div class="col-lg-4 templatemo-item-col all att year-2025">
                                     <div class="meeting-item">
                                         <div class="thumb">
                                             <div class="price">

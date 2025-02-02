@@ -94,6 +94,17 @@ Route::get('/course/{course}', function ($course) {
     }
 });
 
+// Define a route to handle the static gallery page
+Route::get('/meeting/{id}/gallery', function ($id) {
+    // Hardcoded logic to return a view with static data
+    if ($id == 1) {
+        return view('gallery', ['meetingTitle' => 'AI and Machine Learning Summit']);
+    }
+
+    abort(404);  // If no meeting found, show 404 error
+});
+
+
 Route::get('/ProgramAktiviti', function () {
     return view('ProgramAktiviti');
 });
