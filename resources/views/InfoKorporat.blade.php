@@ -84,6 +84,72 @@
             border-color: rgba(0, 81, 180, 0.5);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
         }
+
+        /* Testimonial Section */
+        .testimonial-section {
+            background: #f8f8f8;
+            padding: 40px 0;
+            text-align: center;
+        }
+        .testimonial-section h3 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+        .testimonial-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .testimonial-card p {
+            font-style: italic;
+            color: #555;
+        }
+        .testimonial-card .author {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        /* Video Section */
+        .video-section {
+            padding: 40px 0;
+            text-align: center;
+        }
+        .video-section iframe {
+            width: 100%;
+            height: 400px;
+            border-radius: 8px;
+        }
+
+        /* Call to Action Section */
+        .cta-section {
+            background: rgba(0, 81, 180, 0.9);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        .cta-section a {
+            background-color: #fff;
+            color: rgba(0, 81, 180, 1);
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+        }
+        .cta-section a:hover {
+            background-color: rgba(0, 81, 180, 0.1);
+        }
     </style>
 
     <section class="heading-page" id="top">
@@ -114,7 +180,10 @@
             <!-- Sidebar Navigation -->
             <nav class="col-md-3 col-lg-2 d-md-block sidebar">
                 <div class="position-sticky">
-                    <h5 class="sidebar-title">Navigation</h5>
+
+                    <a href="{{ url('/InfoKorporat') }}" class="logo">
+                        <img src="{{ asset('assets/images/logo.jpg') }}" alt="Logo" style="width: 50%;">
+                    </a>
                     <ul class="nav flex-column">
                         <li class="nav-item">
                             <a class="nav-link active" href="#" data-target="overview">Overview</a>
@@ -155,12 +224,27 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Video Section -->
+                        <section class="video-section">
+                            <div class="container">
+                                <h3>Watch Our Introduction Video</h3>
+                                <iframe src="https://www.youtube.com/embed/your-video-id" allowfullscreen></iframe>
+                            </div>
+                        </section>
+
+                        <!-- Call to Action Section -->
+                        <section class="cta-section">
+                            <div class="container">
+                                <h2>Ready to Start Your Journey?</h2>
+                                <p>Enroll in one of our courses today and start building the career you deserve.</p>
+                                <a href="#enroll-now">Enroll Now</a>
+                            </div>
+                        </section>
                     </div>
                 </div>
             </main>
         </div>
     </div>
-
 @endsection
 
 @section('scripts')
@@ -207,4 +291,5 @@
             });
         });
     </script>
+
 @endsection
