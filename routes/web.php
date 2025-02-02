@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\InfoKorporatController;
+use App\Http\Controllers\ActivityController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -105,9 +106,8 @@ Route::get('/meeting/{id}/gallery', function ($id) {
 });
 
 
-Route::get('/ProgramAktiviti', function () {
-    return view('ProgramAktiviti');
-});
+Route::get('/ProgramAktiviti', [ActivityController::class, 'index']);
+
 
 Route::get('/Pelawat', function () {
     return view('Pelawat');
