@@ -1,14 +1,20 @@
 <?php
 
+use App\Http\Controllers\InfoKorporatController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home');
 })->name('home');
 
+// Route for the main InfoKorporat page
 Route::get('/InfoKorporat', function () {
     return view('InfoKorporat');
 });
+
+// Route for loading specific sections dynamically
+Route::get('/InfoKorporat/{section}', [InfoKorporatController::class, 'showSection']);
+
 
 Route::get('/course', function () {
     return view('course');
@@ -25,6 +31,10 @@ Route::get('/course/{course}', function ($course) {
             'syllabus' => 'The syllabus covers both theoretical and practical aspects of electrical installation and maintenance in single-phase systems. Topics include circuit design, installation techniques, and safety regulations.',
             'financing' => 'Various financing options available through local banks and government schemes.',
             'career' => 'Graduates can work as electrical technicians, electrical system installers, or maintenance technicians in residential and commercial sectors.',
+            'related_courses' => [
+                'Pemasangan & Penyelenggaraan Satu Fasa Penyaman Udara, Pengudaraan, Pemanasan (HVAC)',
+                'Operasi Pemesinan'
+            ],
         ],
         'Pemasangan & Penyelenggaraan Satu Fasa Penyaman Udara, Pengudaraan, Pemanasan (HVAC)' => [
             'title' => 'Air Conditioning – Cooling & Air Conditioning Systems - Single Phase',
@@ -36,6 +46,10 @@ Route::get('/course/{course}', function ($course) {
             'syllabus' => 'Students will learn about the different types of HVAC systems, installation procedures, and maintenance practices. Emphasis is placed on troubleshooting common HVAC issues and providing effective solutions.',
             'financing' => 'Financing options are available through scholarships and installment plans.',
             'career' => 'Graduates will be equipped to work as HVAC technicians, installation experts, and maintenance professionals in both commercial and residential sectors.',
+            'related_courses' => [
+                'Pemasangan & Penyelenggaraan Elektrik - Satu Fasa',
+                'Operasi Pemesinan'
+            ],
         ],
         'Operasi Pemesinan' => [
             'title' => 'Industrial Machining Operations',
@@ -47,11 +61,34 @@ Route::get('/course/{course}', function ($course) {
             'syllabus' => 'The syllabus includes both theoretical knowledge and practical machining operations. Topics cover CNC programming, safety procedures, and quality assurance in machining.',
             'financing' => 'We offer flexible payment plans and scholarship opportunities for eligible students.',
             'career' => 'Graduates can pursue careers as machinists, CNC operators, tool and die makers, and quality control inspectors in manufacturing industries.',
+            'related_courses' => [
+                'Pemasangan & Penyelenggaraan Elektrik - Satu Fasa',
+                'Pemasangan & Penyelenggaraan Satu Fasa Penyaman Udara, Pengudaraan, Pemanasan (HVAC)'
+            ],
+        ],
+    ];
+
+    $instructors = [
+        (object)[
+            'name' => 'John Doe',
+            'bio' => 'Expert in Electrical Engineering with over 10 years of experience in the field.'
+        ],
+        (object)[
+            'name' => 'Jane Smith',
+            'bio' => 'HVAC specialist with extensive knowledge in air conditioning and heating systems.'
+        ],
+        (object)[
+            'name' => 'Alice Johnson',
+            'bio' => 'Skilled machinist with a passion for teaching and sharing knowledge.'
         ],
     ];
 
     if (array_key_exists($course, $courses)) {
-        return view('course.show', $courses[$course]);
+        return view('course.show', [
+            'courseData' => $courses[$course],
+            'relatedCourses' => $courses[$course]['related_courses'],
+            'instructors' => $instructors // Pass the instructors variable to the view
+        ]);
     } else {
         abort(404); // Course not found
     }

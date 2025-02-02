@@ -5,8 +5,9 @@
         <div class="container text-center">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>{{ $title }}</h2>
-                    <p>{{ $description }}</p>
+                    <h2>{{ $courseData['title'] }}</h2>
+                    <p>{{ $courseData['description'] }}</p>
+                    <a href="{{ url('/brochure/course-brochure.pdf') }}" class="btn btn-primary" download>Download Course Brochure</a>
                 </div>
             </div>
         </div>
@@ -40,46 +41,84 @@
             <div class="tab-content" id="courseInfoContent">
                 <div class="tab-pane fade show active" id="modules" role="tabpanel" aria-labelledby="modules-tab">
                     <div class="tab-card">
-                        <p>{{ $modules }}</p>
+                        <p>{{ $courseData['modules'] }}</p>
                     </div>
                 </div>
                 <div class="tab-pane fade" id="fees" role="tabpanel" aria-labelledby="fees-tab">
                     <div class="tab-card">
-                        <p>{{ $fees }}</p>
+                        <p>{{ $courseData['fees'] }}</p>
                     </div>
                 </div>
                 <div class="tab-pane fade" id="duration" role="tabpanel" aria-labelledby="duration-tab">
                     <div class="tab-card">
-                        <p>{{ $duration }}</p>
+                        <p>{{ $courseData['duration'] }}</p>
                     </div>
                 </div>
                 <div class="tab-pane fade" id="prerequisites" role="tabpanel" aria-labelledby="prerequisites-tab">
                     <div class="tab-card">
-                        <p>{{ $prerequisites }}</p>
+                        <p>{{ $courseData['prerequisites'] }}</p>
                     </div>
                 </div>
                 <div class="tab-pane fade" id="syllabus" role="tabpanel" aria-labelledby="syllabus-tab">
                     <div class="tab-card">
-                        <p>{{ $syllabus }}</p>
+                        <p>{{ $courseData['syllabus'] }}</p>
                     </div>
                 </div>
                 <div class="tab-pane fade" id="financing" role="tabpanel" aria-labelledby="financing-tab">
                     <div class="tab-card">
-                        <p>{{ $financing }}</p>
+                        <p>{{ $courseData['financing'] }}</p>
                     </div>
                 </div>
                 <div class="tab-pane fade" id="career" role="tabpanel" aria-labelledby="career-tab">
                     <div class="tab-card">
-                        <p>{{ $career }}</p>
+                        <p>{{ $courseData['career'] }}</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <style>
+    <!-- Related Courses Section -->
+    <section class="related-courses" style="padding: 60px 0;">
+        <div class="container">
+            <h2 class="section-title text-center">Related Courses</h2>
+            <div class="row">
+                @foreach($courseData['related_courses'] as $relatedCourse)
+                    <div class="col-md-4">
+                        <div class="card course-card">
+                            <a href="{{ url('/course/' . $relatedCourse) }}">
+                                <img src="path/to/related-image.jpg" class="card-img-top" alt="{{ $relatedCourse }}">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ $relatedCourse }}</h5>
+                                    <p class="card-text">{{ $courseData['description'] }}</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
 
-            /* Tabs Styling */
+    <!-- Instructor Profiles Section -->
+    <section class="instructor-profiles" style="padding: 60px 0;">
+        <div class="container">
+            <h2 class="section-title text-center">Meet Our Instructors</h2>
+            <div class="row">
+                @foreach($instructors as $instructor)
+                    <div class="col-md-4">
+                        <div class="instructor-card">
+                            <h5>{{ $instructor->name }}</h5>
+                            <p>{{ $instructor->bio }}</p>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
+
+    <style>
+        /* Tabs Styling */
         .nav-tabs .nav-link {
             border: none;
             border-radius: 0;
@@ -115,6 +154,24 @@
             margin-bottom: 20px;
         }
 
+        .related-courses {
+            background-color: #f9f9f9;
+            padding: 60px 0;
+        }
+
+        .instructor-profiles {
+            background-color: #f8f9fa;
+            padding: 60px 0;
+        }
+
+        .instructor-card {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .nav-tabs {
@@ -134,6 +191,14 @@
 
             .tab-card {
                 padding: 10px;
+            }
+
+            .related-courses .card {
+                margin-bottom: 20px;
+            }
+
+            .instructor-card {
+                margin-bottom: 20px;
             }
         }
 
