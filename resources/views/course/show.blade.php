@@ -98,6 +98,27 @@
         .accordion-body.show {
             display: block; /* Show when active */
         }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-tabs {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .nav-tabs .nav-link {
+                margin-bottom: 10px;
+                width: 100%;
+                text-align: center;
+            }
+            .tab-content {
+                padding: 20px;
+            }
+            .tab-card {
+                padding: 10px;
+            }
+            .related-courses .card {
+                margin-bottom: 20px;
+            }
+        }
     </style>
 
     <section class="heading-page header-text" id="top">
@@ -271,30 +292,28 @@
 
             .tab-content {
                 padding: 20px;
+                .tab-card {
+                    padding: 10px;
+                }
+
+                .related-courses .card {
+                    margin-bottom: 20px;
+                }
             }
 
-            .tab-card {
-                padding: 10px;
+            /* Custom Scrollbar */
+            ::-webkit-scrollbar {
+                width: 8px;
             }
 
-            .related-courses .card {
-                margin-bottom: 20px;
+            ::-webkit-scrollbar-thumb {
+                background-color: #007bff;
+                border-radius: 4px;
             }
-        }
 
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background-color: #007bff;
-            border-radius: 4px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background-color: #f0f4f8;
-        }
+            ::-webkit-scrollbar-track {
+                background-color: #f0f4f8;
+            }
     </style>
 
     <script>
