@@ -14,11 +14,12 @@
         }
         /* Sidebar Style */
         .sidebar {
-            height: 100vh;
+            min-height: 100%;
             padding-top: 20px;
             border-right: 2px solid rgba(0, 81, 180, 0.3);
             background: #f7f7f7;
         }
+
         .sidebar-title {
             font-size: 1.4rem;
             font-weight: bold;
@@ -111,6 +112,14 @@
             margin-top: 10px;
         }
 
+        .row {
+            display: flex;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
         /* Video Section */
         .video-section {
             padding: 40px 0;
@@ -156,10 +165,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>Welcome to Our Technical Courses</h1>
+                    <h1>INFO KORPORAT</h1>
                     <p>
-                        Explore a range of hands-on, industry-focused courses designed to equip you with practical skills and knowledge for your career advancement. Choose the course that fits your needs and unlock new opportunities in your field.
-                    </p>
+                        INSTITUT KT SKILL KUALA TERENGGANU                    </p>
                 </div>
             </div>
         </div>

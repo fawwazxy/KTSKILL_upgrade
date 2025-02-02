@@ -26,12 +26,9 @@
     <!-- Hero Section -->
     <div class="main-banner overview-hero custom-blue text-light py-5 text-center">
         <div class="container">
-            <h6>Welcome to Our Institute</h6>
             <h1>Tentang Kami</h1>
             <p class="hero-description">
-                INSTITUT KT SKILL KUALA TERENGGANU adalah sebuah institusi pengajian yang telah berdaftar dengan
-                Jabatan Pembangunan Kemahiran, Kementerian Sumber Manusia, dalam menyediakan kursus pendidikan dan latihan
-                teknikal dan vokasional (TVET) untuk para pelajar.
+                INSTITUT KT SKILL KUALA TERENGGANU adalah Sebuah institusi pengajian yang telah berdaftar dengan Jabatan Pembangunan Kemahiran, Kementerian Sumber Manusia, dalam menyediakan kursus pendidikan dan latihan teknikal dan vokasional (TVET) untuk para pelajar, sesuai dengan standard pekerjaan yang diiktiraf, dengan penekanan kepada komponen praktikal, kemahiran psikomotor dan pendedahan kepada latihan di industri.
             </p>
         </div>
     </div>
