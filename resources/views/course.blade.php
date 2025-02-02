@@ -18,63 +18,64 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             margin-top: 20px;
         }
+        .heading-page {
+            background: url('path/to/your/banner-image.jpg') no-repeat center center/cover;
+            padding: 60px 0;
+            color: white;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        .heading-page h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .heading-page p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+        }
         .course-card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             border: 1px solid #e0e0e0;
             border-radius: 10px;
             overflow: hidden;
-            display: flex; /* Use flexbox */
-            flex-direction: column; /* Stack children vertically */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow */
-            margin-bottom: 20px; /* Add margin for spacing */
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
         }
         .course-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
         }
         .card-body {
-            position: relative; /* Set position to relative for absolute positioning of overlay */
+            position: relative;
             padding: 25px;
-            height: 250px; /* Increase the fixed height for the card body */
-            display: flex; /* Use flexbox */
-            flex-direction: column; /* Stack children vertically */
-            justify-content: space-between; /* Space out children */
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
         .overlay {
             position: absolute;
             left: 0;
             right: 0;
-            bottom: 0; /* Position at the bottom of the card body */
-            background-color: rgba(0, 0, 0, 0.7); /* Black background with transparency */
-            color: white; /* Text color for overlay */
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
             display: flex;
-            align-items: center; /* Center the content vertically */
-            justify-content: center; /* Center the content horizontally */
-            opacity: 0; /* Start hidden */
-            transition: opacity 0.3s ease; /* Smooth transition for opacity */
-            padding: 15px; /* Increase padding for better spacing */
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            padding: 15px;
         }
         .course-card:hover .overlay {
-            opacity: 1; /* Show overlay on hover */
+            opacity: 1;
         }
         .additional-info {
-            text-align: center; /* Center the text in the overlay */
-        }
-        .card-title {
-            font-size: 1.25rem;
-            font-weight: bold;
-            color: #333;
-        }
-        .card-text {
-            color: #555;
-            margin-bottom: 15px;
-            font-size: 1rem;
-            flex-grow: 1; /* Allow the text to grow */
-            overflow: hidden; /* Hide overflow */
-            text-overflow: ellipsis; /* Add ellipsis for overflow text */
-            display: -webkit-box; /* For ellipsis */
-            -webkit-box-orient: vertical; /* For ellipsis */
-            -webkit-line-clamp: 3; /* Limit to 3 lines */
+            text-align: center;
         }
         .accordion-button {
             cursor: pointer;
@@ -87,21 +88,43 @@
         }
         .accordion-body {
             padding: 30px 20px;
-            display: none; /* Initially hide the body */
+            display: none;
         }
         .accordion-body.show {
-            display: block; /* Show when active */
+            display: block;
+        }
+        .text-custom-light {
+            color: rgba(255, 255, 255, 0.8);
         }
         /* Responsive Design */
         @media (max-width: 768px) {
             .content-container {
-                padding: 20px; /* Reduce padding on smaller screens */
+                padding: 20px;
             }
             .course-card {
-                margin-bottom: 15px; /* Reduce margin for smaller screens */
+                margin-bottom: 15px;
+            }
+            .heading-page h1 {
+                font-size: 2rem;
+            }
+            .heading-page p {
+                font-size: 1rem;
             }
         }
     </style>
+
+    <section class="heading-page" id="top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Welcome to Our Technical Courses</h1>
+                    <p class="text-custom-light">
+                        Explore a range of hands-on, industry-focused courses designed to equip you with practical skills and knowledge for your career advancement. Choose the course that fits your needs and unlock new opportunities in your field.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <div class="social-icons">
         <ul>
@@ -114,11 +137,10 @@
 
     <div class="container-fluid">
         <div class="row">
-            <!-- Main Content Area -->
             <main class="col-md-12 px-4">
                 <div class="content-container">
                     <section id="course-list">
-                        <h2 class="text-custom-blue">Senarai Kursus Yang Menarik Ditawarkan</h2>
+                        <h2 class="text-custom-blue">Explore Our Courses</h2>
                         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
                             <div class="col">
                                 <div class="card course-card" style="cursor: pointer;">
