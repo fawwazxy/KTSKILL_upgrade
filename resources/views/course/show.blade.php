@@ -295,24 +295,21 @@
                 .tab-card {
                     padding: 10px;
                 }
-
                 .related-courses .card {
                     margin-bottom: 20px;
+                    height: 100%; /* Ensure all cards have the same height */
                 }
             }
 
-            /* Custom Scrollbar */
-            ::-webkit-scrollbar {
-                width: 8px;
+            /* Ensure uniformity in card sizes */
+            .course-card {
+                height: 100%; /* Make all course cards the same height */
+                display: flex;
+                flex-direction: column; /* Stack children vertically */
             }
 
-            ::-webkit-scrollbar-thumb {
-                background-color: #007bff;
-                border-radius: 4px;
-            }
-
-            ::-webkit-scrollbar-track {
-                background-color: #f0f4f8;
+            .card-body {
+                flex-grow: 1; /* Allow the card body to grow and fill the space */
             }
     </style>
 
