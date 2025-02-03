@@ -142,60 +142,27 @@
                     <section id="course-list">
                         <h2 class="text-custom-blue">Explore Our Courses</h2>
                         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                            <div class="col">
-                                <div class="card course-card" style="cursor: pointer;">
-                                    <a href="{{ url('/course/Pemasangan & Penyelenggaraan Elektrik - Satu Fasa') }}">
-                                        <img src="path/to/laravel-image.jpg" class="card-img-top">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Pemasangan & Penyelenggaraan Elektrik - Satu Fasa</h5>
-                                            <p class="card-text">Learn electrical installation and maintenance for single-phase systems.</p>
-                                            <div class="overlay">
-                                                <div class="additional-info">
-                                                    <p><strong>Duration:</strong> 1 Fasa</p>
-                                                    <p><strong>Modules:</strong> 8</p>
-                                                    <p><strong>Instructor:</strong> John Doe</p>
+                            @foreach($courses as $course)
+                                <div class="col">
+                                    <div class="card course-card">
+                                        <a href="{{ url('/course/' . $course->courseCode) }}">
+                                            @if($course->imagePath)
+                                                <img src="{{ asset($course->imagePath) }}" class="card-img-top" alt="{{ $course->courseName }}">
+                                            @endif
+                                            <div class="card-body">
+                                                <h5 class="card-title">{{ $course->courseName }}</h5>
+                                                <p class="card-text">{{ $course->courseCode }}</p>
+                                                <div class="overlay">
+                                                    <div class="additional-info">
+                                                        <p><strong>Duration:</strong> {{ $course->duration }}</p>
+                                                        <p><strong>Requirements:</strong> {{ Str::limit($course->requirement, 50) }}</p>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </a>
+                                        </a>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col">
-                                <div class="card course-card" style="cursor: pointer;">
-                                    <a href="{{ url('/course/Pemasangan & Penyelenggaraan Satu Fasa Penyaman Udara, Pengudaraan, Pemanasan (HVAC)') }}">
-                                        <img src="path/to/react-image.jpg" class="card-img-top">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Pemasangan & Penyelenggaraan Satu Fasa Penyaman Udara, Pengudaraan, Pemanasan (HVAC)</h5>
-                                            <p class="card-text">Learn HVAC systems maintenance and installation for single-phase systems.</p>
-                                            <div class="overlay">
-                                                <div class="additional-info">
-                                                    <p><strong>Duration:</strong> 1 Fasa</p>
-                                                    <p><strong>Modules:</strong> 6</p>
-                                                    <p><strong>Instructor:</strong> Jane Smith</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="card course-card" style="cursor: pointer;">
-                                    <a href="{{ url('/course/Operasi Pemesinan') }}">
-                                        <img src="path/to/python-image.jpg" class="card-img-top">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Operasi Pemesinan</h5>
-                                            <p class="card-text">Learn machining operations for industrial applications.</p>
-                                            <div class="overlay">
-                                                <div class="additional-info">
-                                                    <p><strong>Duration:</strong> 1 Fasa</p>
-                                                    <p><strong>Modules:</strong> 10</p>
-                                                    <p><strong>Instructor:</strong> Alice Johnson</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </section>
 

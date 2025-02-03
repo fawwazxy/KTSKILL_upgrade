@@ -1,6 +1,6 @@
 
     <div class="container">
-        <h2 class="text-center text-custom-blue mb-4">Leadership Team</h2>
+        <h2 class="text-center text-custom-blue mb-4">Pemimpin dan Eksekutif KTSkill 2025</h2>
 
         <div class="leadership-hierarchy">
             <!-- CEO Section (Top Level) -->

@@ -125,9 +125,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>{{ $courseData['title'] }}</h2>
-                    <h6>{{ $courseData['description'] }}</h6>
-                    <a href="{{ url('/brochure/course-brochure.pdf') }}" class="btn btn-primary" download>Download Course Brochure</a>
+                    <h2>{{ $course->courseName }}</h2>
+                    <h6>{{ $course->courseCode }}</h6>
+                    <a href="{{ url('/brochure/course-brochure.pdf') }}" class="btn btn-primary" download>
+                        Download Course Brochure
+                    </a>
                 </div>
             </div>
         </div>
@@ -175,65 +177,43 @@
             <div class="tab-content" id="courseInfoContent">
                 <div class="tab-pane fade show active" id="modules" role="tabpanel" aria-labelledby="modules-tab">
                     <div class="tab-card">
-                        <p>{{ $courseData['modules'] }}</p>
+                        <p>{{ $course->syllabus }}</p>
                     </div>
                 </div>
                 <div class="tab-pane fade" id="fees" role="tabpanel" aria-labelledby="fees-tab">
                     <div class="tab-card">
-                        <p>{{ $courseData['fees'] }}</p>
+                        <p>{{ $course->fees }}</p>
                     </div>
                 </div>
                 <div class="tab-pane fade" id="duration" role="tabpanel" aria-labelledby="duration-tab">
                     <div class="tab-card">
-                        <p>{{ $courseData['duration'] }}</p>
+                        <p>{{ $course->duration }}</p>
                     </div>
                 </div>
                 <div class="tab-pane fade" id="prerequisites" role="tabpanel" aria-labelledby="prerequisites-tab">
                     <div class="tab-card">
-                        <p>{{ $courseData['prerequisites'] }}</p>
+                        <p>{{ $course->prerequisites }}</p>
                     </div>
                 </div>
                 <div class="tab-pane fade" id="syllabus" role="tabpanel" aria-labelledby="syllabus-tab">
                     <div class="tab-card">
-                        <p>{{ $courseData['syllabus'] }}</p>
+                        <p>{{ $course->syllabus }}</p>
                     </div>
                 </div>
                 <div class="tab-pane fade" id="financing" role="tabpanel" aria-labelledby="financing-tab">
                     <div class="tab-card">
-                        <p>{{ $courseData['financing'] }}</p>
+                        <p>{{ $course->financing }}</p>
                     </div>
                 </div>
                 <div class="tab-pane fade" id="career" role="tabpanel" aria-labelledby="career-tab">
                     <div class="tab-card">
-                        <p>{{ $courseData['career'] }}</p>
+                        <p>{{ $course->career_opportunities }}</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Related Courses Section -->
-    <section class="related-courses" style="padding: 60px 0;">
-        <div class="container">
-            <h2 class="section-title text-center">Related Courses</h2>
-            <div class="row">
-                @foreach($courseData['related_courses'] as $relatedCourse)
-                    <div class="col-md-4">
-                        <div class="card course-card">
-                            <a href="{{ url('/course/' . $relatedCourse) }}">
-                                <img src="path/to/related-image.jpg" class="card-img-top" alt="{{ $relatedCourse }}">
-                                <div class="card-body">
-                                    <h5 class="card-title">{{ $relatedCourse }}</h5>
-                                    <p class="card-text">{{ $courseData['description'] }}</p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-        </div>
-    </section>
-
+    
     <style>
         /* Tabs Styling */
         .nav-tabs .nav-link {
