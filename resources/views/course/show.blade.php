@@ -144,18 +144,8 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="fees-tab" data-toggle="tab" href="#fees" role="tab" aria-controls="fees" aria-selected="false">
-                        <i class="fas fa-dollar-sign icon"></i> Fees
-                    </a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" id="duration-tab" data-toggle="tab" href="#duration" role="tab" aria-controls="duration" aria-selected="false">
                         <i class="fas fa-clock icon"></i> Duration
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="prerequisites-tab" data-toggle="tab" href="#prerequisites" role="tab" aria-controls="prerequisites" aria-selected="false">
-                        <i class="fas fa-check-circle icon"></i> Prerequisites
                     </a>
                 </li>
                 <li class="nav-item">
@@ -180,19 +170,9 @@
                         <p>{{ $course->syllabus }}</p>
                     </div>
                 </div>
-                <div class="tab-pane fade" id="fees" role="tabpanel" aria-labelledby="fees-tab">
-                    <div class="tab-card">
-                        <p>{{ $course->fees }}</p>
-                    </div>
-                </div>
                 <div class="tab-pane fade" id="duration" role="tabpanel" aria-labelledby="duration-tab">
                     <div class="tab-card">
                         <p>{{ $course->duration }}</p>
-                    </div>
-                </div>
-                <div class="tab-pane fade" id="prerequisites" role="tabpanel" aria-labelledby="prerequisites-tab">
-                    <div class="tab-card">
-                        <p>{{ $course->prerequisites }}</p>
                     </div>
                 </div>
                 <div class="tab-pane fade" id="syllabus" role="tabpanel" aria-labelledby="syllabus-tab">
@@ -213,7 +193,7 @@
             </div>
         </div>
     </section>
-    
+
     <style>
         /* Tabs Styling */
         .nav-tabs .nav-link {
