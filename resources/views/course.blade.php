@@ -44,6 +44,7 @@
             flex-direction: column;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
+            height: 100%;
         }
         .course-card:hover {
             transform: translateY(-5px);
@@ -140,7 +141,7 @@
             <main class="col-md-12 px-4">
                 <div class="content-container">
                     <section id="course-list">
-                        <h2 class="text-custom-blue">Explore Our Courses</h2>
+                        <h2 class="text-custom-blue" style="text-align: center">Explore Our Courses</h2>
                         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
                             @foreach($courses as $course)
                                 <div class="col">
@@ -166,57 +167,13 @@
                         </div>
                     </section>
 
-                    <!-- FAQ Section -->
-                    <section id="faq" class="custom-section bg-light text-dark shadow-sm">
-                        <h2 class="section-title text-center">Frequently Asked Questions</h2>
-                        <div class="accordion" id="faqAccordion">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingOne">
-                                    <button class="accordion-button" type="button" onclick="toggleAccordion('collapseOne')">
-                                        What courses do you offer?
-                                    </button>
-                                </h2>
-                                <div id="collapseOne" class="accordion-body">
-                                    We offer a variety of technical and vocational courses tailored to industry standards.
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingTwo">
-                                    <button class="accordion-button" type="button" onclick="toggleAccordion('collapseTwo')">
-                                        How can I enroll?
-                                    </button>
-                                </h2>
-                                <div id="collapseTwo" class="accordion-body">
-                                    You can enroll by visiting our website or contacting our admissions office.
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingThree">
-                                    <button class="accordion-button" type="button" onclick="toggleAccordion('collapseThree')">
-                                        What are the prerequisites for the courses?
-                                    </button>
-                                </h2>
-                                <div id="collapseThree" class="accordion-body">
-                                    Prerequisites vary by course. Please check the course details for specific requirements.
-                                </div>
-                            </div>
-                        </div>
-                    </section>
+
                 </div>
             </main>
         </div>
     </div>
 
     <script>
-        function toggleAccordion(collapseId) {
-            const body = document.getElementById(collapseId);
-            if (body.classList.contains('show')) {
-                body.classList.remove('show');
-            } else {
-                const allBodies = document.querySelectorAll('.accordion-body');
-                allBodies.forEach(b => b.classList.remove('show'));
-                body.classList.add('show');
-            }
-        }
+
     </script>
 @endsection
