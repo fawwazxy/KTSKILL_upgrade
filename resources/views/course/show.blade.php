@@ -287,7 +287,7 @@
         document.addEventListener("DOMContentLoaded", function () {
             // Function to activate the tab based on the URL hash
             function activateTabFromHash() {
-                const hash = window.location.hash || '#modules'; // Default to '#modules'
+                const hash = window.location.hash || '#requirements'; // Default to '#modules'
                 const targetTab = document.querySelector(`.nav-link[href="${hash}"]`);
                 if (targetTab) {
                     // Remove active class from all tabs and tab-content
