@@ -139,7 +139,12 @@
         <div class="container">
             <ul class="nav nav-tabs" id="courseInfoTabs" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link active" id="modules-tab" data-toggle="tab" href="#modules" role="tab" aria-controls="modules" aria-selected="true">
+                    <a class="nav-link active" id="modules-tab" data-toggle="tab" href="#requirements" role="tab" aria-controls="modules" aria-selected="true">
+                        <i class="fas fa-book icon"></i> Requirement
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="modules-tab" data-toggle="tab" href="#modules" role="tab" aria-controls="modules" aria-selected="true">
                         <i class="fas fa-book icon"></i> Modules
                     </a>
                 </li>
@@ -165,6 +170,11 @@
                 </li>
             </ul>
             <div class="tab-content" id="courseInfoContent">
+                <div class="tab-pane fade show active" id="requirements" role="tabpanel" aria-labelledby="modules-tab">
+                    <div class="tab-card">
+                        <p>{{ $course->requirement }}</p>
+                    </div>
+                </div>
                 <div class="tab-pane fade show active" id="modules" role="tabpanel" aria-labelledby="modules-tab">
                     <div class="tab-card">
                         <p>{{ $course->syllabus }}</p>
