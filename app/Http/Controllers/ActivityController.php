@@ -15,4 +15,11 @@ class ActivityController extends Controller
 
         return view('ProgramAktiviti', compact('activities2024', 'activities2025')); // Reference to 'activity.blade.php'
     }
+
+    public function show(Activity $activity)
+    {
+        // Load the activity with its images
+        $activity->load('images');
+        return view('activity-detail', compact('activity'));
+    }
 }

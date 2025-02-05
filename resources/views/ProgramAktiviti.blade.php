@@ -79,7 +79,7 @@
                                 <div class="thumb">
                                     <!-- Price removed as per your request -->
                                     <div class="price"></div>
-                                    
+
                                     <!-- Randomly Select an Image -->
                                     @php
                                         $images = ['meeting-01.jpg', 'meeting-02.jpg', 'meeting-03.jpg'];
@@ -108,7 +108,7 @@
                                 <div class="thumb">
                                     <!-- Price removed as per your request -->
                                     <div class="price"></div>
-                                    
+
                                     <!-- Randomly Select an Image -->
                                     @php
                                         $images = ['meeting-01.jpg', 'meeting-02.jpg', 'meeting-03.jpg'];
@@ -123,7 +123,8 @@
                                         <!-- Display only the year from created_at -->
                                         <h6>{{ \Carbon\Carbon::parse($activity->created_at)->format('Y') }}</h6>
                                     </div>
-                                    <a href="{{ url('activity-detail/' . $activity->id) }}"><h4>{{ $activity->activity_name }}</h4></a>
+                                    {{-- In your activity loop --}}
+                                    <a href="{{ route('activity-detail', $activity->activityID) }}"><h4>{{ $activity->activity_name }}</h4></a>
                                     <p>{{ $activity->description }}</p>
                                 </div>
                             </div>

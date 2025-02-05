@@ -52,6 +52,10 @@ Route::get('/meeting/{id}/gallery', function ($id) {
 
 Route::get('/ProgramAktiviti', [ActivityController::class, 'index']);
 
+// Add this with your other activity routes
+// In web.php
+Route::get('/activity-detail/{activity:activityID}', [ActivityController::class, 'show'])
+    ->name('activity-detail');
 
 Route::get('/Pelawat', function () {
     return view('Pelawat');

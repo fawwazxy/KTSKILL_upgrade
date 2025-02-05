@@ -10,16 +10,17 @@ class Activity extends Model
 {
     use HasFactory, SoftDeletes;
 
-    // Explicitly declare the table name if it differs from the model name
-    protected $table = 'activity';  // Specify the table name here
+    protected $table = 'activity';
+    protected $primaryKey = 'activityID'; // Add this line
+    public $incrementing = true; // Ensure this is true (default)
+    protected $keyType = 'int'; // Match your primary key type
+
+    public function images()
+    {
+        return $this->hasMany(Image::class, 'activityID');
+    }
 
     protected $fillable = [
         'activity_name', 'description', 'year', 'status',
     ];
-
-    // Cast the 'images' attribute as an array (optional, for multiple images)
-    protected $casts = [
-        'images' => 'array',
-    ];
 }
-
