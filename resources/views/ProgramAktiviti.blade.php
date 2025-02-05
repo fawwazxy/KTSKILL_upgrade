@@ -114,7 +114,7 @@
                                         $images = ['meeting-01.jpg', 'meeting-02.jpg', 'meeting-03.jpg'];
                                         $randomImage = $images[array_rand($images)];
                                     @endphp
-                                    <a href="{{ url('activity/' . $activity->id . '/gallery') }}">
+                                    <a href="{{route('activity-detail', $activity->activityID) }}">
                                         <img src="{{ asset('assets/images/' . $randomImage) }}" alt="{{ $activity->activity_name }}">
                                     </a>
                                 </div>
