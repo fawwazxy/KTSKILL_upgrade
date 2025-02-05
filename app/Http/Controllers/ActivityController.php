@@ -9,17 +9,24 @@ class ActivityController extends Controller
 {
     public function index()
     {
-        // Retrieve activities for 2024 and 2025
-        $activities2024 = Activity::where('year', 2024)->get();
-        $activities2025 = Activity::where('year', 2025)->get();
+        $activities = Activity::with('images')
+            ->orderBy('year', 'desc')
+            ->paginate(9);
 
-        return view('ProgramAktiviti', compact('activities2024', 'activities2025')); // Reference to 'activity.blade.php'
+        $years = Activity::select('year')
+            ->distinct()
+            ->orderBy('year', 'desc')
+            ->pluck('year');
+
+        return view('ProgramAktiviti', compact('activities', 'years'));
     }
 
     public function show(Activity $activity)
     {
-        // Load the activity with its images
-        $activity->load('images');
+        $activity->load(['images' => function($query) {
+            $query->orderBy('created_at', 'desc');
+        }]);
+
         return view('activity-detail', compact('activity'));
     }
 }

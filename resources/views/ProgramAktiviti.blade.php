@@ -1,6 +1,35 @@
 @extends('layouts.app')
 
 <style>
+    .activity-item {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-radius: 15px;
+        overflow: hidden;
+    }
+    .activity-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+    .filters li {
+        cursor: pointer;
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 0 5px;
+        border-radius: 25px;
+        transition: all 0.3s ease;
+        background: #f8f9fa;
+    }
+    .filters li.active {
+        background: #2a2a2a;
+        color: white;
+    }
+    #back-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        display: none;
+        z-index: 1000;
+    }
     .activity-item .down-content {
   background-color: #fff; /* Background color */
   padding: 18px; /* Padding */
@@ -43,6 +72,7 @@
   margin-top: auto; /* Push price to the bottom */
 }
     </style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/isotope-layout@3/dist/isotope.min.css">
 
 @section('content')
 
@@ -61,79 +91,72 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <div class="filters">
+                <div class="filters mb-4">
                     <ul>
                         <li data-filter="*" class="active">All Activities</li>
-                        <li data-filter=".year-2024">2024</li> <!-- Filter for 2024 -->
-                        <li data-filter=".year-2025">2025</li> <!-- Filter for 2025 -->
+                        @foreach($years as $year)
+                            <li data-filter=".year-{{ $year }}">{{ $year }}</li>
+                        @endforeach
                     </ul>
                 </div>
             </div>
 
-            <div class="col-lg-12">
-                <div class="row grid">
-                    <!-- Display Activities for 2024 -->
-                    @foreach($activities2024 as $activity)
-                        <div class="col-lg-4 templatemo-item-col all year-{{ $activity->year }}">
-                            <div class="activity-item">
-                                <div class="thumb">
-                                    <!-- Price removed as per your request -->
-                                    <div class="price"></div>
-
-                                    <!-- Randomly Select an Image -->
-                                    @php
-                                        $images = ['meeting-01.jpg', 'meeting-02.jpg', 'meeting-03.jpg'];
-                                        $randomImage = $images[array_rand($images)];
-                                    @endphp
-                                    <a href="{{ url('activity/' . $activity->id . '/gallery') }}">
-                                        <img src="{{ asset('assets/images/' . $randomImage) }}" alt="{{ $activity->activity_name }}">
-                                    </a>
-                                </div>
-                                <div class="down-content">
-                                    <div class="date">
-                                        <!-- Display only the year from created_at -->
-                                        <h6>{{$activity->year}}</h6>
-                                    </div>
-                                    <a href="{{ url('activity-detail/' . $activity->id) }}"><h4>{{ $activity->activity_name }}</h4></a>
-                                    <p>{{ $activity->description }}</p>
-                                </div>
-                            </div>
-                        </div>
-                    @endforeach
-
-                    <!-- Display Activities for 2025 -->
-                    @foreach($activities2025 as $activity)
-                        <div class="col-lg-4 templatemo-item-col all year-{{ $activity->year }}">
-                            <div class="activity-item">
-                                <div class="thumb">
-                                    <!-- Price removed as per your request -->
-                                    <div class="price"></div>
-
-                                    <!-- Randomly Select an Image -->
-                                    @php
-                                        $images = ['meeting-01.jpg', 'meeting-02.jpg', 'meeting-03.jpg'];
-                                        $randomImage = $images[array_rand($images)];
-                                    @endphp
-                                    <a href="{{route('activity-detail', $activity->activityID) }}">
-                                        <img src="{{ asset('assets/images/' . $randomImage) }}" alt="{{ $activity->activity_name }}">
-                                    </a>
-                                </div>
-                                <div class="down-content">
-                                    <div class="date">
-                                        <!-- Display only the year from created_at -->
-                                        <h6>{{ \Carbon\Carbon::parse($activity->created_at)->format('Y') }}</h6>
-                                    </div>
-                                    {{-- In your activity loop --}}
-                                    <a href="{{ route('activity-detail', $activity->activityID) }}"><h4>{{ $activity->activity_name }}</h4></a>
-                                    <p>{{ $activity->description }}</p>
-                                </div>
-                            </div>
-                        </div>
-                    @endforeach
+            @if($activities->isEmpty())
+                <div class="col-12">
+                    <div class="alert alert-info">
+                        No activities found.
+                    </div>
                 </div>
+            @endif
+
+            <div class="row grid">
+                @foreach($activities as $activity)
+                    <div class="col-lg-4 templatemo-item-col all year-{{ $activity->year }}">
+                        <div class="activity-item">
+                            <div class="thumb">
+                                @php
+                                    $mainImage = $activity->images->first();
+                                @endphp
+                                <a href="{{ route('activity-detail', $activity->activityID) }}">
+                                    @if($mainImage)
+                                        <img src="{{ asset($mainImage->image_path) }}"
+                                             alt="{{ $activity->activity_name }}"
+                                             loading="lazy"
+                                             style="height: 250px; object-fit: cover; width: 100%;">
+                                    @else
+                                        <img src="{{ asset('assets/images/default-activity.jpg') }}"
+                                             alt="Default activity image"
+                                             loading="lazy"
+                                             style="height: 250px; object-fit: cover; width: 100%;">
+                                    @endif
+                                </a>
+                            </div>
+                            <div class="down-content">
+                                <div class="date">
+                                    <h6>{{ $activity->year }}</h6>
+                                </div>
+                                <a href="{{ route('activity-detail', $activity->activityID) }}">
+                                    <h4>{{ $activity->activity_name }}</h4>
+                                </a>
+                                <p>{{ Str::limit($activity->description, 100) }}</p>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+
+            @if($activities->hasPages())
+                <div class="row mt-4">
+                    <div class="col-lg-12">
+                        <div class="pagination justify-content-center">
+                            {{ $activities->links() }}
+                        </div>
+                    </div>
+                </div>
+            @endif
             </div>
         </div>
-    </div>
+    </section>
 
 
     <div class="social-icons">
@@ -144,7 +167,26 @@
             <li><a href="#" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
         </ul>
     </div>
-<script>
 
-</script>
+    @section('scripts')
+        <script src="https://cdn.jsdelivr.net/npm/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Isotope Filtering
+                const iso = new Isotope('.grid', {
+                    itemSelector: '.templatemo-item-col',
+                    layoutMode: 'fitRows',
+                    transitionDuration: '0.4s'
+                });
+
+                document.querySelectorAll('.filters li').forEach(filter => {
+                    filter.addEventListener('click', function() {
+                        document.querySelector('.filters .active').classList.remove('active');
+                        this.classList.add('active');
+                        iso.arrange({ filter: this.getAttribute('data-filter') });
+                    });
+                });
+            });
+        </script>
+@endsection
 @endsection
