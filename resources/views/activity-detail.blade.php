@@ -103,13 +103,6 @@
             @else
                 <div class="alert alert-info">No images available for this activity.</div>
             @endif
-            <!-- Activity Description -->
-            <div class="activity-meta-card">
-                <h3 class="mb-4">Activity Description</h3>
-                <div class="activity-description">
-                    {!! nl2br(e($activity->description)) !!}
-                </div>
-            </div>
         </div>
     </section>
 
