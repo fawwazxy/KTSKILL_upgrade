@@ -22,7 +22,7 @@
                             <a href="{{ url('/InfoKorporat') }}" class="{{ request()->is('/InfoKorporat') ? 'active' : '' }}">Info Korporat</a>
                         </li>
                         <li class="scroll-to-section">
-                            <a href="{{ url('course') }}" class="{{ request()->is('course') ? 'active' : '' }}">Kursus</a>
+                            <a href="{{ url('courses') }}" class="{{ request()->is('courses') ? 'active' : '' }}">Kursus</a>
                         </li>
                         <li class="scroll-to-section">
                             <a href="{{ url('/ProgramAktiviti') }}" class="{{ request()->is('/ProgramAktiviti') ? 'active' : '' }}">Program & Aktiviti</a>
@@ -30,8 +30,13 @@
                         <li class="scroll-to-section">
                             <a href="{{ url('/Pelawat') }}" class="{{ request()->is('/Pelawat') ? 'active' : '' }}">Pelawat</a>
                         </li>
-                        <li class="scroll-to-section">
-                            <a href="{{ url('/Kakitangan') }}" class="{{ request()->is('/Kakitangan') ? 'active' : '' }}">Kakitangan</a>
+                        <li class="scroll-to-section dropdown">
+                            <a href="{{ url('/Kakitangan') }}" class="{{ request()->is('/Kakitangan') ? 'active' : '' }} dropdown-toggle" id="kakitanganDropdown" role="button">
+                                Kakitangan
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="kakitanganDropdown">
+                                <li><a class="dropdown-item" href="{{ url('/admin/login') }}">KT Skill Admin Login</a></li>
+                            </ul>
                         </li>
                         <li class="scroll-to-section">
                             <a href="/contact" class="{{ request()->is('/contact') ? 'active' : '' }}">Hubungi Kami</a>
@@ -74,5 +79,28 @@
     }
     .contact-info p {
         margin: 0;
+    }
+
+    /* Dropdown Hover Effect */
+    .dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0; /* Aligns dropdown with the nav link */
+    }
+
+    .dropdown-menu {
+        background-color: #0051b4; /* Matches the theme color */
+        border: none;
+        border-radius: 5px;
+        padding: 10px 0;
+    }
+
+    .dropdown-item {
+        color: #fff;
+        padding: 10px 20px;
+    }
+
+    .dropdown-item:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        color: #fff;
     }
 </style>

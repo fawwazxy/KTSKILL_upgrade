@@ -19,13 +19,13 @@ Route::get('/InfoKorporat/{section}', [InfoKorporatController::class, 'showSecti
 
 
 // List all courses
-Route::get('/course', function () {
+Route::get('/courses', function () {
     $courses = Course::all(); // Fetch all courses from the database
     return view('course', compact('courses')); // Pass the $courses variable to the view
 });
 
-// Show a single course
-Route::get('/course/{course}', function (Course $course) {
+// Show a single courses
+Route::get('/courses/{courses}', function (Course $course) {
     // Temporary instructors data (you can create an instructors table later)
     $instructors = [
         (object)['name' => 'John Doe', 'bio' => 'Expert in Electrical Engineering...'],
@@ -33,8 +33,8 @@ Route::get('/course/{course}', function (Course $course) {
         (object)['name' => 'Alice Johnson', 'bio' => 'Skilled machinist...'],
     ];
 
-    return view('course.show', [
-        'course' => $course,
+    return view('courses.show', [
+        'courses' => $course,
         'instructors' => $instructors
     ]);
 });
