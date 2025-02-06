@@ -146,7 +146,7 @@
                             @foreach($courses as $course)
                                 <div class="col">
                                     <div class="card course-card">
-                                        <a href="{{ url('/course/' . $course->courseCode) }}">
+                                        <a href="{{ url('/courses/' . $course->courseCode) }}">
                                             @if($course->imagePath)
                                                 <img src="{{ asset($course->imagePath) }}" class="card-img-top" alt="{{ $course->courseName }}">
                                             @endif
