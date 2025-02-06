@@ -129,7 +129,7 @@
             <li><a href="#" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
         </ul>
     </div>
-    
+
     <section class="heading-page header-text" id="top">
         <div class="container">
             <div class="row">

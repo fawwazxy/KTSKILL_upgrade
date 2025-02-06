@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\InfoKorporatController;
-use App\Http\Controllers\ActivityController;
+use App\Http\Controllers\Activity_Controller;
 use App\Models\Course;
 use Illuminate\Support\Facades\Route;
 
@@ -50,11 +50,11 @@ Route::get('/meeting/{id}/gallery', function ($id) {
 });
 
 
-Route::get('/ProgramAktiviti', [ActivityController::class, 'index']);
+Route::get('/ProgramAktiviti', [Activity_Controller::class, 'index']);
 
 // Add this with your other activity routes
 // In web.php
-Route::get('/activity-detail/{activity:activityID}', [ActivityController::class, 'show'])
+Route::get('/activity-detail/{activity:activityID}', [Activity_Controller::class, 'show'])
     ->name('activity-detail');
 
 Route::get('/Pelawat', function () {
